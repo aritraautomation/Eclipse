@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+	id="org.springframework.tooling.cloudfoundry.manifest.ls.feature"
+	label="%featureName"
+	version="4.0.0.201804061725"
+	provider-name="%providerName">
+
+    <description>
+       %description
+    </description>
+
+    <copyright>
+       %copyright
+    </copyright>
+
+    <license url="%licenseUrl">
+       %license
+    </license>
+
+	<requires>
+		<import plugin="org.eclipse.lsp4e"/>
+	</requires>
+
+	<plugin
+		id="org.springframework.tooling.cloudfoundry.manifest.ls"
+		download-size="18864"
+		install-size="21337"
+		version="0.2.1.201804061725"
+		unpack="false">
+	</plugin>
+
+</feature>

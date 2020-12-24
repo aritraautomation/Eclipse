@@ -1,0 +1,576 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: HFYLL+DhcJ2ZY0rKgimZxsQRYtc+0
+ E1OD68e/fdNYQc=
+SHA-256-Digest-Manifest: sVNsksVB+juFsXWYXJtkw63ezqO0FwWOxElWoEDJFFw=
+Created-By: 1.8.0_144 (Oracle Corporation)
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$22.class
+SHA-256-Digest: jm4Mumu2cdeCdGDO/msVhi6zMKSAqKvadZ8WFmjV/oY=
+
+Name: plugin.xml
+SHA-256-Digest: K048mffytro0vw/UiWBZMp2GGhRNmnRotPxom16mHfQ=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractDashboardPage$
+ PartDescriptor.class
+SHA-256-Digest: LaOgfK5/a8BTq14D7HzWjDghJdoEIjNFOc/9wmHEFc0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$4.class
+SHA-256-Digest: CpM6qbw1NJSey9+Dtrp46EQnb45c1IyoWsFGI4lKBoU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor.class
+SHA-256-Digest: R3MlexRTBPmtKux4L/ffFuCsuR4p8WeWFQ4EwXtxTlc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$31$1.class
+SHA-256-Digest: klVoxCBBupaM0NaCwEpOoj89QdL5x69urR/pjswPeaw=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$2.class
+SHA-256-Digest: rFMenaY9kNxNYf681H6Q7T6cUx7wIPH3GazdEJlfDTA=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/ShowInstallExt
+ ensionAction.class
+SHA-256-Digest: 31r22eaerTkBcxVXw/RGa/H1ThxFyX7gvJxmsddKU9w=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$12.class
+SHA-256-Digest: h9EhDOh24pG4ze4oaQWQMJRZ/UfkYa+jKCMBH79/NYk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$32.class
+SHA-256-Digest: W065Hy8MpDucFu193furb/NNi/IJNH29GQN2XG0YAHs=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/ShowDashboardA
+ ction.class
+SHA-256-Digest: MheohgmLNmqRsJNqIHNJxtiAnLcpHGOD5iSvtY5yQh4=
+
+Name: icons/view16/spring.png
+SHA-256-Digest: 4WOC+h/ej6k/bPB3asgabtceNi/yENSq9GdsS16BdOQ=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractNewProjectActi
+ on.class
+SHA-256-Digest: D97hxMwhNFNZcq9XSHT7DKnmLNt22+wba0867XAF1jQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$1.class
+SHA-256-Digest: FKVumPuy1I9NydhXPlg1XCNmW1VnjfwLeYI8qF0jJyY=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/ShowDashboardP
+ ageAction$1.class
+SHA-256-Digest: 70UxkjszEweaTzLgqBkI1hoLN/LP8/G+49DQEbviM2k=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skEditorActionContributor$GlobalAction.class
+SHA-256-Digest: yZMCTvIJqIOA/7g3zn/mL62V6RnbXwsHdZvyYheEzsU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$DashboardDiscoveryViewer.class
+SHA-256-Digest: 6sl/TrqTQHH0+6Hi2nPXETXcfMRAqJZgGufMZJmnVgs=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$4.class
+SHA-256-Digest: jLOmZn6Y+wzCw30KRtGQDA6EW1RaKecTGO2KpoBO134=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$5.class
+SHA-256-Digest: liW7qMNQc1GcsUmNQabAuTA2YqJo2e31SkcBlvCLeeM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Feeds
+ Reader.class
+SHA-256-Digest: hmxV2R/X8lgQMjkpyj9jqRySCSlqmKx6OTL7XJ7D0cE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$18.class
+SHA-256-Digest: mojiFN43eayxT1nb46X2KCdqzxx3k+4XOBkuWybE7RM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$4.class
+SHA-256-Digest: HP2n6cz7Yn+S1gYtizzlzcSHhJ/7LyiCW8U5+hiy6+8=
+
+Name: rss/spring-research.xml
+SHA-256-Digest: atrZrK21zhB/D7JCdjI7aqiY+mKLBnBdCHK8JpmDJuQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Cache
+ dFeedsManager.class
+SHA-256-Digest: UC0ODO4NKeMrD0w6BoI20/3/lIfuPgN4jdFdTcaI5GU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Updat
+ eNotification$Artifact.class
+SHA-256-Digest: YCI/ReOdJqkUPj7lZbR03MeBAjan7bs59SzNrdiLQls=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$5.class
+SHA-256-Digest: TDbdy77NJzKNXp9VngGJOS5Rhw93zSKgWFacQOW0QWg=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Aggre
+ gateFeedJob.class
+SHA-256-Digest: 7OxC0Q3b9oEouJY/6fz7yuMS0VQjHHMyep8nVpG8H0Y=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$1.class
+SHA-256-Digest: 3vG9iqAEQ6owe3jsz23rRU5dBziq10mNzK51mhT1Dww=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$ActionPart$1.class
+SHA-256-Digest: CEg/T3vNf0hLJYhAiOs3LBSn21oBEIyyPDg/n0AQ9CQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$7.class
+SHA-256-Digest: fW+kAco7o4V9li3tSOR01FubnM8/g16ia4t2IgKXS80=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$2.class
+SHA-256-Digest: rNz4d/DjjyCtlqYBoLANV6ThveXWxYapC68sbJ7xwVk=
+
+Name: icons/prod/newsletter_subscription.gif
+SHA-256-Digest: RnQkSHqvW9tq5njnI2e8JdvdLoNUpo216K+EZdyUfmo=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage.class
+SHA-256-Digest: 4wcgQg7aZHd6jX3iZ6FgEJvmNaorMGELNGl9gmclHF8=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$15.class
+SHA-256-Digest: pgbYoGIoYVH/sF0qEGwJphHY6XFbXR2R3CPQil9IVss=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPageFactory.class
+SHA-256-Digest: HGDhJxDn8kzwHlUl8iceMy569wUNIq9+euYsgRFvEig=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$7.class
+SHA-256-Digest: tGdeQUHFa4j/U1LBiG7QWawTPVmbTOvU0vhIrjfNu3M=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: Foo5Ng6QUy0wMHXr0xy802XBRrVzgu3D+MDjZIjacl0=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/IEnabledDashboardPart.
+ class
+SHA-256-Digest: 86+3iUB4Pu8pgiETZsiEObi8Z8j73W6EkVGKkacB4D8=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$2.class
+SHA-256-Digest: fXPNoXlw8gDc/TEQtuB/QmU3kwqPn70Ga/3VDIlL6/0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/IdeUiPlugin.c
+ lass
+SHA-256-Digest: 5h6jzvzXEsocSdZ2r+sOHYszXgZBHmxSWTY7j4YX4+c=
+
+Name: content/overviewExtensionContent.xml
+SHA-256-Digest: qVDfbFILu1/mP+KZ9E7r8cvElJGI5WqW/5QF3Sbhdro=
+
+Name: content/author-terms.html
+SHA-256-Digest: k8SipLZl2B6MMd7zTyFYsTZ7CSqOlfpUJddRoT7e2JM=
+
+Name: rss/spring-news.xml
+SHA-256-Digest: Pzl/F4Ukbmh+VWvvJY3TGlTigE/cDlbCRWgoqH+HecM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$17.class
+SHA-256-Digest: bAmbDPLdkt6fXVdnHLKCDTKgxTDUkuLUv6suRQZNHNQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$AttributesPart.class
+SHA-256-Digest: ixuTIE9N28WLxtM1Qnrs+DJwgB1ii1njs7/T8ngozSU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$27.class
+SHA-256-Digest: aBfCUb64QBMZuUi6hNdx5XqIUfJ1+FG6e8SDqMI7fBw=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$4.class
+SHA-256-Digest: lXGAatpBq6s1HfWZREbynUb46UZmH0dqchG2TDzWH4c=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/util/IdeUiUti
+ ls$1.class
+SHA-256-Digest: y90MfpYIq99sDv9QPqlGyQDN1VjMp7FVVy/32RjdIOs=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractDashboardPart.
+ class
+SHA-256-Digest: Xt6qHVuuczsnxok2DAV+nz1l1zTCfNoVqe8h+JTf8/c=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$26$1.class
+SHA-256-Digest: 1Ox8aU0EFfF1HPoznr4q5Q+ywKy7DIUJLDpqolxvux4=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$4.class
+SHA-256-Digest: +kM7oDsU83mVZNyIXR9k7hz7r0AJP0lrQIuBPS97g+M=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$1.class
+SHA-256-Digest: oPVdExwtxlWeQ3eoCLnSbbKFgOau32yhDWBOaI8fZfc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$6.class
+SHA-256-Digest: SE+H1rp88853igtrMPalLaU+vF9OYVuO0DpyRcxR+lE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$6$1.class
+SHA-256-Digest: /USYAEkjPaafRgvCzS09Oeuqo2CPpibAfF7C2RjDiKA=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skEditorActionContributor.class
+SHA-256-Digest: s7f3yuc3hOXaPP5ecziXRB8MmpSnrfbCs6UwxqF1lrU=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/ShowDashboardP
+ ageAction.class
+SHA-256-Digest: Ao1alAuIlqFah4KqE7vPy3j0PQn8lVvuzrWJW23V934=
+
+Name: icons/prod/spring_logo_transparent.png
+SHA-256-Digest: MN3jfKWXUh/RDuQsj3mHRoV4h++q0JU8dTMcx4cTeLY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$3.class
+SHA-256-Digest: P8U+6wkXef4xmAvwVZdASDEE6sjzkOjPcUbeGdYNB1k=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/IdeUiPlugin$1
+ .class
+SHA-256-Digest: eZxOUh5M7PAwOvSLOllo6uZDOG5sEtWTJGeatvbESr0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$28.class
+SHA-256-Digest: sb7P2AEGiT6IH6wD6QKaCWaf3oMVaeWLim4WDXiOYao=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractDashboardPage$
+ ExtensionPartDescriptor.class
+SHA-256-Digest: KvhAsshLyTegcyEC2Bhyx+P2NRWZoNj/fQaDy/btNMM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$1.class
+SHA-256-Digest: QgFL8DLZtBNcHO6wbBSAGMqvHxI8CKukhhHQITvYqKY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/IFeedLi
+ stener.class
+SHA-256-Digest: EuSKYVicZrxRJ8iPmgxnxSMXDmUyok5wl3UpsViA+Bo=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$21.class
+SHA-256-Digest: SGDbDYbFQGCaM1yiQqymeNbR05I0IWo+FeFWm7mNZb8=
+
+Name: icons/prod/spring_32.png
+SHA-256-Digest: Xyks9Qa1L2TWXh0IY1UdmMoCd+9SCtO5Pvbug8sfYbg=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$5.class
+SHA-256-Digest: jJDd6NZD9dOdP9zDUGdErBGdJwFWu23c9+/YImsHH0w=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit.class
+SHA-256-Digest: xjthlWh3uqODKUyEndwU8FdfCrVhkWMbygK7fgyyVwM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$16.class
+SHA-256-Digest: KL/SpnbNEjj/F1DRL7MAP4/+QlurL8NOhY80fAD+2fE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Abstr
+ actFormPage.class
+SHA-256-Digest: YXnLGzRW/fsx94UFybIf1W89MWeEhy7/rIITxu1gd0A=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/preferences/M
+ ainPreferencesPage$PropertyEditor.class
+SHA-256-Digest: BhYJlaahUT4EYXzbQrHo8sTBTiAW6+8z6puVZOpAiUU=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractDashboardPage$
+ 1.class
+SHA-256-Digest: N1ViSOCtAQkUy+z/EAfJ7AuCcsw8Ct9vQ89W+ZtVKlI=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$FeedType.class
+SHA-256-Digest: 514vnLi7Fcc/LPcuQkwdRmbSUYO/y3kf3ho560sSYEE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$ExtensionPageDescriptor.class
+SHA-256-Digest: ffScXQ7KjjU/r+Td7lrxuMhr/6b3CxWWTVjIOZNRiDU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$5.class
+SHA-256-Digest: oDRTfdYdZuC3O+uz2ik56TCPC/QGwQS1bA8U0LgcJbI=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$2.class
+SHA-256-Digest: IEKDATjdpccoZisDMcCGdbQN2UHBo99xS5yQYUPBpug=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/util/IdeUiUti
+ ls$1$1.class
+SHA-256-Digest: 6HlxmO0cFiP8t3DBhDIWuQG/ILV0WdLfCLKGNkP3cv0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Aggre
+ gateFeedJob$1.class
+SHA-256-Digest: v9XrQxNQL5NR6IYftU/Wrgh19tmAfKCkK0lCFnpGWo8=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$10.class
+SHA-256-Digest: nzmi1PkYiUoTAYBF0Gm77/biJftSAnbsl/M8OpPr5+c=
+
+Name: content/overview.css
+SHA-256-Digest: lhaKXmIRHPw5zXpChRp2Alrh88P7MrpE7nJPjL78LR8=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$5.class
+SHA-256-Digest: mS44Lu/uOG7FNYIdB+pQJJGkjRPJNudx+0ob05W+Vsk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$19.class
+SHA-256-Digest: FWWodmpeQf9+9ZkEKDf6s8SUfod5hTyRz1SI4QR3YKo=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/preferences/M
+ ainPreferencesPage.class
+SHA-256-Digest: vPuFeUMZ0JlRVM/R+LPWMsxuMPmNfNM5Hh42o68UaYM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$6.class
+SHA-256-Digest: gXXTtfJxNxTKPfvl1Jqdrgft+3osYyVizsuZ48XeS3A=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardEditorInput.class
+SHA-256-Digest: BIHzoE39YQBI5MfL9TDrRma6MfrLUaDtstBRChbCTlA=
+
+Name: icons/rss/overlay-incoming.png
+SHA-256-Digest: MUGLSsMYfAjDsSCFLvvWgRuwgYm3V3/T+h4iz/4G7yk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardReopener$1.class
+SHA-256-Digest: wcckNQAvVtL67WByTsliSUOk/gKnxZQ7RhccGdUIjoY=
+
+Name: rss/vmware-news.xml
+SHA-256-Digest: NRLMz/s9xlpR0R+Zwtpz4DIfGbZgKS5oN4A+mKlpe44=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$6.class
+SHA-256-Digest: 5HzAvdDt0iknAEBRxqHfEFkNDPnz1Ck6azW0LCggRDY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StubS
+ yndEntryImpl.class
+SHA-256-Digest: cYvXWFXgSQo5/58VAXAHAWMbCX12NpPlLMzu4Cfo8Cw=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/IIdeUiConstan
+ ts.class
+SHA-256-Digest: iFXq1jOw0w4UR0vOR6/lHtfOSBB801DyX6a/SR+2HEM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$10$1.class
+SHA-256-Digest: h1Jp+dWQAicmMKblzkyh/gVudQecygdU8nbKSEdw8G0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/IdeUiPlugin$1
+ $1.class
+SHA-256-Digest: XnOACE4zIpc9l68zKRDBA9eDAk8hvb0VAz6PD0KUq8s=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Aggre
+ gateFeedJob$2.class
+SHA-256-Digest: mug1CXV4SqGDov1nzPRwtRWIuggEfrp/t8N/t1oryFo=
+
+Name: rss/spring-webinars.xml
+SHA-256-Digest: DcTw/cd7RF63bCOzMdgdt1a7n+GVWq1dQQyNW2uJVcg=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$3.class
+SHA-256-Digest: ZsnCzeftVxdEYZFPhUs7mTSSa+ttNFkgd7Adphafdfw=
+
+Name: rss/spring-events.xml
+SHA-256-Digest: TUn40SZvEMtSTZrLV8EIg/+fSSOzOZCnrI2JPdZO5v4=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$9.class
+SHA-256-Digest: HxJdoNJfgKkmi+VdhIll23GwFYldx3UkjwnTCAgR6gc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$8.class
+SHA-256-Digest: +x2wtFfOCR8mcd6b4SnIsq8cY23YZdm90Bcvx90Vsps=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage.class
+SHA-256-Digest: miA+9g4/H7kA/NLdiKKjNNOXICpY1geCoK2ywxeo70w=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Updat
+ eNotification.class
+SHA-256-Digest: wT8OfdzwVRELNkp92d3Cc9oS1OKfMlXnmyM7QBevdPc=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$29.class
+SHA-256-Digest: 3T9wlDYxtxZg336nN/8xYgtjP8CuKPGg8ZCIsZL56/o=
+
+Name: content/manage-runtime.png
+SHA-256-Digest: g5K9sWckwRYD6QfV9XofoNCN/nV2r5sMyiB5L2qt51w=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/IDashboardWith
+ Pages.class
+SHA-256-Digest: B1KyWS22XZlFG5HJg/39sJJT1AFuydp9SLY8sQh2rXA=
+
+Name: icons/view16/spring@2x.png
+SHA-256-Digest: rIKo2mnxOCbpUSp0f8oHJoZN0wsi+rUG85awAtNgmxw=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$6.class
+SHA-256-Digest: BPBJyEZoOSwAZEQiwrTSeRJpXSgV3fj5k6NmwX6RR6s=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$1.class
+SHA-256-Digest: y6JFCnx4cqyqs3Gsod8f5UrX4FHV5DMtZnIxabvpKYk=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$3.class
+SHA-256-Digest: nI98mw88W40Qxe6wxorp9Vp+ambE5iRD/L2mT4oLIeE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$31.class
+SHA-256-Digest: oglRY/uFMOy8/P8qbVb9ULCzG8lPZVH3OEZxelbZHRE=
+
+Name: rss/spring-downloads.xml
+SHA-256-Digest: 5g0Svfs7euAVpBB2xdn/QslbQoPeM9p38geIG3rTTbE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$3.class
+SHA-256-Digest: srJ1biZLizt4HC/iHBa5tjnpfmUw0klmY71u6NuuoMs=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$23.class
+SHA-256-Digest: v4fxL0S0WWHuM+IywAls3SCpmOC6dyjjmNjXKX9YHs8=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$11.class
+SHA-256-Digest: Hw3KyuJ7n7jidOydzSFQLbce9sWLH/MAskVVqFnTTf8=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/actions/ShowDashboardC
+ ommand.class
+SHA-256-Digest: ndtHBItfP+zRzt0BRxZEPNN6e9ZEG4sw6KnbVwyFfVU=
+
+Name: org/springsource/ide/eclipse/dashboard/ui/AbstractDashboardPage.
+ class
+SHA-256-Digest: loMDv2qkjrRtoXZ3hhfsYnxlBFUFq//csKm1VcXD3qY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor.class
+SHA-256-Digest: vD2LJ4k4rVoJI6UktaN3Y0Te9Qu8lrdxjg/5de0WQv0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$26.class
+SHA-256-Digest: ZlP7zZb3VvQDpLAHGiOMTfC3eiGVkZTP2kfLbl6opdI=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage.class
+SHA-256-Digest: BD+/NgI5/5Q05DnYAcLDGQkdaiwaZiQ8DsorNLFypi0=
+
+Name: content/sts48.png
+SHA-256-Digest: iZwIX3YQRf72k85v37lEsRrWHK+fE4RytuGNR1b9RWE=
+
+Name: icons/rss/blank.png
+SHA-256-Digest: B9mn4df0SpoHG77nqzZKZHZzUyPOpJB2nx95CYfC7rg=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/util/IdeUiUti
+ ls.class
+SHA-256-Digest: yEYSqff4Jo7KiBgeFBryuym/gvGX2FJhAAz9HHrJv9U=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$20.class
+SHA-256-Digest: rX0MNu9Ec973KzJdt3SU8uGf+504Djo1hZdcUDS1iH0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Feeds
+ LabelProvider.class
+SHA-256-Digest: xk+crRtQytp6W2dkIrlNjfoTdWrbLVcFNQ2bWEBr1/I=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Heade
+ rPart.class
+SHA-256-Digest: 3RS5YdhAG/98RKIR2nOb965bV1d+DFDeL/A5YBb7WpE=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$7.class
+SHA-256-Digest: pTXxCBDH02NBREn5rjU8R9vRawx/EHP/Ln408H0X2w4=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTe
+ xtViewerConfiguration.class
+SHA-256-Digest: n4kbpKd64C4cRLrJN1r2MgYBSin//NdRfMnN9OaIF/g=
+
+Name: icons/view16/welcome.png
+SHA-256-Digest: jMIqB81eAwXlk2QOs56T/iygclJ2ueAkDAYwgQcmVpA=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Feeds
+ ContentProvider.class
+SHA-256-Digest: 5TgWkGSeuZakAdKN65hj81XmN6L2WuwpJV4duDALLpY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardReopener.class
+SHA-256-Digest: O6tHFZiRD+kjrXTTO0AbGwbwUVS+/tnnhxghOTEL0j0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$3.class
+SHA-256-Digest: kHyIDJeIm27flNpPZ8Ng0ZJrdqFL60IGDswDdeHYqlA=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$1.class
+SHA-256-Digest: 98X/+yZtPdVhUWHTGOviWKu14puYjoBrActjTelMbcM=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$14.class
+SHA-256-Digest: jPM/N1+SzcD62z0D2VJm58DygPEUFljGlaODzoaUdoU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$4.class
+SHA-256-Digest: 28HFZy8YffBxPL66lH6cMvYdTTRa+NN4HbgMhsf8j14=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$24.class
+SHA-256-Digest: 4pmby6T8BrWiWqYpe7SWrLQ1IP5qLLf5MBat0589kWw=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Multi
+ PageDashboardEditor$PageDescriptor.class
+SHA-256-Digest: 9cqQqq2KJbnnRM516KTl6KXkSCwnySVXLPA/6YVwmFM=
+
+Name: about.html
+SHA-256-Digest: IalNqqbJ1YIRFECGMYWxWHRy4Uk0GVGKgxd4zmiD+s4=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/feeds/FeedMon
+ itor$3.class
+SHA-256-Digest: 17piQKtuZW3yIT3jiJUSHz0fGqus6834Ljw5mTqqCNY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$13.class
+SHA-256-Digest: 7a+Rmc26ZTNejw3cqtngzytgNm/9bkc5x8Ig4TUXaM8=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$6.class
+SHA-256-Digest: LSJ/ILoUcIqLUNEkPBOimfQXh5p8A8SPlNZPooO4wNY=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$8.class
+SHA-256-Digest: pi7JokLtno9wUIWJoHV31qCudHWFpzZb3TOKnf31fV4=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$25.class
+SHA-256-Digest: Rf4N5w8YZWojVAtCbQP5C2IS7qnxwyaJCB8TRMS90pw=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Feeds
+ Reader$SyndEntryComparator.class
+SHA-256-Digest: 79cuzPBwivvIqxpA8BedQ6PHAjTeXTuvn+ehuLlLNPU=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$30.class
+SHA-256-Digest: gTjhfrj1o1k+DopJgiuRzKoirbMSmQ5pRCMY8J6+C+g=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Edito
+ rToolkit$ActionContributorProxy.class
+SHA-256-Digest: fl8ql6E81QFQb/bpgNS84ud9ZM+6gWX2JTQmhv8lZhI=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/discovery/Das
+ hboardExtensionsPage$2.class
+SHA-256-Digest: W6byM6ELCHL0Lz85ClSXjzJatzmpA1ByJoqjGvk36qw=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/StsTa
+ skPage$ActionPart.class
+SHA-256-Digest: xcAxLLVSrUPkza6CU9swK7KOF3W+foUvVUzBgV52vmQ=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$31$1$1.class
+SHA-256-Digest: f3aAYD8kxKm/lid6VNNCq59kgARiu3sNpyd/G+biwc0=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardMainPage$2.class
+SHA-256-Digest: U3nraJWi99o6mferL5FDAReXMlQ62IJC8/MgxOsl6gg=
+
+Name: org/springsource/ide/eclipse/dashboard/internal/ui/editors/Dashb
+ oardEditorInputFactory.class
+SHA-256-Digest: aIwc1jx0hzI3EY2OF2S6JJP+wcoJvQlctDX9ihTllpk=
+

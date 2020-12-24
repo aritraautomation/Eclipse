@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Emmet"
+            id="io.emmet.eclipse.commands.category">
+      </category>
+      <!-- Define commands in order to make default bindings work -->
+      <command
+            name="Expand Abbreviation"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.ExpandAbbreviationAction"
+            id="io.emmet.eclipse.commands.expand_abbreviation">
+      </command>
+      <command
+            name="Balance (outward)"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.balance_outward">
+      </command>
+      <command
+            name="Balance (inward)"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.balance_inward">
+      </command>
+      <command
+            name="Wrap With Abbreviation..."
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.WrapWithAbbreviationAction"
+            id="io.emmet.eclipse.commands.wrap_with_abbreviation">
+      </command>
+      <!--
+      <command
+            name="Previous Edit Point"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.prev_edit_point">
+      </command>
+      <command
+            name="Next Edit Point"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.next_edit_point">
+      </command> -->
+      <command
+            name="Go to Matching Pair"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.matching_pair">
+      </command>
+      <command
+            name="Merge Lines"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.merge_lines">
+      </command>
+      <command
+            name="Toggle Comment"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.toggle_comment">
+      </command>
+      <command
+            name="Split/Join Tag"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.split_join_tag">
+      </command>
+      <command
+            name="Remove Tag"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.remove_tag">
+      </command>
+      <!--<command
+            name="Encode/Decode Data:URL"
+            categoryId="io.emmet.eclipse.commands.category"
+            id="io.emmet.eclipse.commands.encode_decode_data_url">
+      </command>
+      <command
+            name="Update Image Size"
+            categoryId="io.emmet.eclipse.commands.category"
+            id="io.emmet.eclipse.commands.update_image_size">
+      </command>-->
+      <command
+            name="Increment number by 1"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.increment_number_by_1">
+      </command>
+      <command
+            name="Decrement number by 1"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.decrement_number_by_1">
+      </command>
+      <command
+            name="Increment number by 0.1"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.increment_number_by_01">
+      </command>
+      <command
+            name="Decrement number by 0.1"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.decrement_number_by_01">
+      </command>
+      <command
+            name="Increment number by 10"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.increment_number_by_10">
+      </command>
+      <command
+            name="Decrement number by 10"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.decrement_number_by_10">
+      </command>
+      <!-- <command
+            name="Evaluate Math Expression"
+            categoryId="io.emmet.eclipse.commands.category"
+            id="io.emmet.eclipse.commands.evaluate_math_expression">
+      </command> -->
+      <command
+            name="Select Next Item"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.select_next_item">
+      </command>
+      <command
+            name="Select Previous Item"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.select_previous_item">
+      </command>
+      <command
+            name="Reflect CSS Value"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.DefaultAction"
+            id="io.emmet.eclipse.commands.reflect_css_value">
+      </command>
+      <command
+            name="Emmet Cheat Sheet"
+            categoryId="io.emmet.eclipse.commands.category"
+            defaultHandler="io.emmet.eclipse.handlers.ShowCheatSheetHandler"
+            id="io.emmet.eclipse.commands.show_cheat_sheet">
+      </command>
+      
+      <command
+            name="Open External URL"
+            defaultHandler="io.emmet.eclipse.handlers.OpenURLHandler"
+            id="io.emmet.eclipse.commands.OpenExtURL">
+            <commandParameter
+                id="url"
+                name="URL"
+                optional="false"/>
+      </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="io.emmet.eclipse.commands.expand_abbreviation"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M1+M3+Enter"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.balance_outward"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M1+0"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.balance_inward"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M1+9"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.wrap_with_abbreviation"
+            contextId="org.eclipse.core.runtime.xml"
+            sequence="M1+M3+W"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <!--
+      <key
+            commandId="io.emmet.eclipse.commands.prev_edit_point"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M3+CTRL+["
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.next_edit_point"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M3+CTRL+]"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      -->
+      <key
+            commandId="io.emmet.eclipse.commands.merge_lines"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M1+M3+M"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.toggle_comment"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M1+M3+/"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.split_join_tag"
+            contextId="org.eclipse.core.runtime.xml"
+            sequence="M3+J"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.remove_tag"
+            contextId="org.eclipse.core.runtime.xml"
+            sequence="M1+M2+I"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.matching_pair"
+            contextId="org.eclipse.core.runtime.xml"
+            sequence="M1+M3+T"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.reflect_css_value"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M1+M2+M3+R"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.select_previous_item"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M3+CTRL+,"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.select_next_item"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M3+CTRL+."
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+     <!-- <key
+            commandId="io.emmet.eclipse.commands.encode_decode_data_url"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M2+M3+I"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="io.emmet.eclipse.commands.update_image_size"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M1+M2+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key> -->
+      <key
+            platforms="win32,gtk"
+            commandId="io.emmet.eclipse.commands.increment_number_by_1"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M1+M3+ARROW_RIGHT"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            platforms="win32,gtk"
+            commandId="io.emmet.eclipse.commands.decrement_number_by_1"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="M1+M3+ARROW_LEFT"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <!--<menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Emmet"
+               mnemonic="E"
+               id="io.emmet.eclipse.menus.emmetMenu">
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            class="io.emmet.eclipse.EmmetMenuContribution"
+            locationURI="menu:io.emmet.eclipse.menus.emmetMenu">
+      </menuContribution>-->
+  		<menuContribution
+			locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+			<menu label="Emmet" id="io.emmet.eclipse.menu" icon="icons/emmet.png">
+				<separator name="main" visible="true"/>
+			</menu>
+		</menuContribution>
+  		
+      	<menuContribution
+	            allPopups="true"
+	            class="io.emmet.eclipse.EmmetMenuContribution"
+	            locationURI="popup:io.emmet.eclipse.menu">
+      	</menuContribution>
+   </extension>
+   
+	<extension point="org.eclipse.ui.startup">
+		<startup class="io.emmet.eclipse.Startup"/>
+	</extension>
+	<extension point="org.eclipse.ui.keywords">
+	    <keyword
+	            label="emmet"
+	            id="io.emmet.eclipse.keywords"/>
+    </extension>
+    
+       <!-- Product specific preference pages -->
+   
+   <!-- MyEclipse -->
+   <extension
+   		 id="myeclipse-spec.emmet.prefPage"
+         point="org.eclipse.ui.preferencePages">
+    <page
+    	  category="com.genuitec.eclipse.viper.preferencepage.editor"
+          class="io.emmet.eclipse.preferences.EclipseEmmetPreferencePage"
+          id="io.emmet.eclipse.preferences.EclipseEmmetPreferencePage"
+          name="Emmet">
+          <keywordReference id="io.emmet.eclipse.keywords"/>
+    </page>
+   </extension>
+   
+   <!-- Webclipse -->
+   <extension
+   		 id="webclipse-spec.emmet.prefPage"
+         point="org.eclipse.ui.preferencePages">
+    <page
+    	  category="org.eclipse.wst.html.ui.preferences.web"
+          class="io.emmet.eclipse.preferences.EclipseEmmetPreferencePage"
+          id="io.emmet.eclipse.preferences.EclipseEmmetPreferencePage"
+          name="Emmet">
+          <keywordReference id="io.emmet.eclipse.keywords"/>
+    </page>
+   </extension>
+   
+   <!-- end of product specific pref page contribs -->
+    
+ <extension
+       point="org.eclipse.ui.preferencePages">
+    <page
+          class="io.emmet.eclipse.preferences.EmmetAbbreviationsPreferencesPage"
+          id="io.emmet.eclipse.preferences.EmmetAbbreviationsPreferencesPage"
+          name="Abbreviations"
+          category="io.emmet.eclipse.preferences.EclipseEmmetPreferencePage">
+          <keywordReference id="io.emmet.eclipse.keywords"/>
+    </page>
+    <page
+          class="io.emmet.eclipse.preferences.EmmetSnippetsPreferencesPage"
+          id="io.emmet.eclipse.preferences.EmmetSnippetsPreferencesPage"
+          name="Snippets"
+          category="io.emmet.eclipse.preferences.EclipseEmmetPreferencePage">
+          <keywordReference id="io.emmet.eclipse.keywords"/>
+    </page>
+    
+    <page
+          class="io.emmet.eclipse.preferences.EmmetVariablesPreferencePage"
+          id="io.emmet.eclipse.preferences.EmmetVariablesPreferencePage"
+          name="Variables"
+          category="io.emmet.eclipse.preferences.EclipseEmmetPreferencePage">
+          <keywordReference id="io.emmet.eclipse.keywords"/>
+    </page>
+    
+    <!-- Output preferences -->
+    <page
+          class="io.emmet.eclipse.preferences.output.DefaultOutputPreferencePage"
+          id="io.emmet.eclipse.preferences.OutputPreferencesPage"
+          name="Output"
+          category="io.emmet.eclipse.preferences.EclipseEmmetPreferencePage">
+          <keywordReference id="io.emmet.eclipse.keywords"/>
+    </page>
+    <page
+          class="io.emmet.eclipse.preferences.output.HTMLOutputPreferencePage"
+          id="io.emmet.eclipse.preferences.HTMLPreferencesPage"
+          name="HTML"
+          category="io.emmet.eclipse.preferences.OutputPreferencesPage">
+          <keywordReference id="io.emmet.eclipse.keywords"/>
+    </page>
+    <page
+          class="io.emmet.eclipse.preferences.output.CSSOutputPreferencePage"
+          id="io.emmet.eclipse.preferences.CSSPreferencesPage"
+          name="CSS"
+          category="io.emmet.eclipse.preferences.OutputPreferencesPage">
+          <keywordReference id="io.emmet.eclipse.keywords"/>
+    </page>
+    <page
+          class="io.emmet.eclipse.preferences.output.XMLOutputPreferencePage"
+          id="io.emmet.eclipse.preferences.XMLPreferencesPage"
+          name="XML"
+          category="io.emmet.eclipse.preferences.OutputPreferencesPage">
+          <keywordReference id="io.emmet.eclipse.keywords"/>
+    </page>
+    <page
+          class="io.emmet.eclipse.preferences.output.XSLOutputPreferencePage"
+          id="io.emmet.eclipse.preferences.XSLPreferencesPage"
+          name="XSL"
+          category="io.emmet.eclipse.preferences.OutputPreferencesPage">
+          <keywordReference id="io.emmet.eclipse.keywords"/>
+    </page>
+    <page
+          class="io.emmet.eclipse.preferences.output.HAMLOutputPreferencePage"
+          id="io.emmet.eclipse.preferences.HAMLPreferencesPage"
+          name="HAML"
+          category="io.emmet.eclipse.preferences.OutputPreferencesPage">
+          <keywordReference id="io.emmet.eclipse.keywords"/>
+    </page>
+ </extension>
+ <extension
+       point="org.eclipse.core.runtime.preferences">
+    <initializer
+          class="io.emmet.eclipse.preferences.PreferenceInitializer">
+    </initializer>
+ </extension>
+ 
+ <extension point="org.eclipse.ui.editors.templates">
+         <contextType
+               class="io.emmet.eclipse.EmmetContextType"
+               id="io.emmet.eclipse.templates.html"
+               name="HTML"/>
+         <contextType
+               class="io.emmet.eclipse.EmmetContextType"
+               id="io.emmet.eclipse.templates.css"
+               name="CSS"/>
+         <contextType
+               class="io.emmet.eclipse.EmmetContextType"
+               id="io.emmet.eclipse.templates.xml"
+               name="XML"/>
+         <contextType
+               class="io.emmet.eclipse.EmmetContextType"
+               id="io.emmet.eclipse.templates.xsl"
+               name="XSL"/>
+         <contextType
+               class="io.emmet.eclipse.EmmetContextType"
+               id="io.emmet.eclipse.templates.haml"
+               name="HAML"/>
+         <contextType
+               class="io.emmet.eclipse.EmmetContextType"
+               id="io.emmet.eclipse.variable"
+               name="Variable"/>
+               
+         <template
+            autoinsert="false"
+            name="lang"
+            description=""
+            contextTypeId="io.emmet.eclipse.variable"
+            id="io.emmet.eclipse.variable.lang">
+			<pattern>en</pattern>
+		</template>
+        <template
+            autoinsert="false"
+            name="locale"
+            description=""
+            contextTypeId="io.emmet.eclipse.variable"
+            id="io.emmet.eclipse.variable.locale">
+			<pattern>en-US</pattern>
+		</template>
+        <template
+            autoinsert="false"
+            name="charset"
+            description=""
+            contextTypeId="io.emmet.eclipse.variable"
+            id="io.emmet.eclipse.variable.charset">
+			<pattern>UTF-8</pattern>
+		</template>
+    </extension>
+	<extension point="org.eclipse.ui.views">
+	    <view
+           category="org.eclipse.help.ui"
+           class="io.emmet.eclipse.views.CheatSheetView"
+           icon="icons/emmet.png"
+           id="io.emmet.eclipse.views.cheatsheet"
+           name="Emmet Cheat Sheet"/>
+	</extension>
+    <extension
+     point="com.genuitec.eclipse.dashboard.common.capabilities">
+		<installed groupId="webclipse.emmet"/>
+	</extension>
+    <extension
+          point="com.genuitec.eclipse.webclipse.ui.webclipsePreferencePage">
+       <pageClass
+             qualifiedName="io.emmet.eclipse.preferences.EclipseEmmetPreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="io.emmet.eclipse.preferences.EmmetAbbreviationsPreferencesPage">
+       </pageClass>
+       <pageClass
+             qualifiedName="io.emmet.eclipse.preferences.output.DefaultOutputPreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="io.emmet.eclipse.preferences.output.CSSOutputPreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="io.emmet.eclipse.preferences.output.HAMLOutputPreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="io.emmet.eclipse.preferences.output.HTMLOutputPreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="io.emmet.eclipse.preferences.output.XMLOutputPreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="io.emmet.eclipse.preferences.output.XSLOutputPreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="io.emmet.eclipse.preferences.EmmetSnippetsPreferencesPage">
+       </pageClass>
+       <pageClass
+             qualifiedName="io.emmet.eclipse.preferences.EmmetVariablesPreferencePage">
+       </pageClass>
+    </extension>
+</plugin>

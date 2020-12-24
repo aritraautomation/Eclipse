@@ -1,0 +1,47 @@
+"use strict";
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+function assertArrayOfStrings(identifier, value) {
+    if (value == null) {
+        return;
+    }
+    if (!Array.isArray(value)) {
+        throw new Error("Expected '" + identifier + "' to be an array of strings.");
+    }
+    for (var i = 0; i < value.length; i += 1) {
+        if (typeof value[i] !== 'string') {
+            throw new Error("Expected '" + identifier + "' to be an array of strings.");
+        }
+    }
+}
+exports.assertArrayOfStrings = assertArrayOfStrings;
+var INTERPOLATION_BLACKLIST_REGEXPS = [
+    /^\s*$/,
+    /[<>]/,
+    /^[{}]$/,
+    /&(#|[a-z])/i,
+    /^\/\//,
+];
+function assertInterpolationSymbols(identifier, value) {
+    if (value != null && !(Array.isArray(value) && value.length == 2)) {
+        throw new Error("Expected '" + identifier + "' to be an array, [start, end].");
+    }
+    else if (value != null) {
+        var start_1 = value[0];
+        var end_1 = value[1];
+        // black list checking
+        INTERPOLATION_BLACKLIST_REGEXPS.forEach(function (regexp) {
+            if (regexp.test(start_1) || regexp.test(end_1)) {
+                throw new Error("['" + start_1 + "', '" + end_1 + "'] contains unusable interpolation symbol.");
+            }
+        });
+    }
+}
+exports.assertInterpolationSymbols = assertInterpolationSymbols;
+//# sourceMappingURL=assertions.js.map

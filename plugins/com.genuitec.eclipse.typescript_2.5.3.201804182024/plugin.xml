@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+  Copyright 2013 Palantir Technologies, Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<plugin>
+   <extension-point id="service" name="Service Extenders" schema="schema/service.exsd"/>
+
+   <extension
+         point="org.eclipse.compare.contentMergeViewers">
+      <viewer
+            id="com.genuitec.eclipse.typescript.mergeViewer"
+            class="com.genuitec.eclipse.typescript.MergeViewerCreator"
+            extensions="ts, tsx">
+      </viewer>
+      <contentTypeBinding
+            contentTypeId="com.genuitec.eclipse.typescript.tsSource"
+            contentMergeViewerId="com.genuitec.eclipse.typescript.mergeViewer">
+      </contentTypeBinding>
+   </extension>
+
+   <extension
+         id="typeScriptBuilder"
+         name="TypeScript Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder>
+         <run
+               class="com.genuitec.eclipse.typescript.TypeScriptBuilder">
+         </run>
+      </builder>
+   </extension>
+   
+   
+   <extension
+        point="org.eclipse.ui.editors.documentProviders">
+     <provider
+           class="org.eclipse.ui.editors.text.TextFileDocumentProvider"
+           inputTypes="org.eclipse.ui.IStorageEditorInput"
+           extensions="ts,tsx"
+           id="com.genuitec.eclipse.typescript.text.TypeScriptDocumentProvider">
+     </provider>
+   </extension>
+   
+   <extension
+        point="org.eclipse.e4.ui.css.swt.theme">
+      <stylesheet
+            uri="css/e4_dark_theme.css">
+         <themeid
+            refid="org.eclipse.e4.ui.css.theme.e4_dark">
+         </themeid>
+      </stylesheet>
+   </extension>
+   
+   <extension
+	 id="com.genuitec.eclipse.typescript.text.typeScriptDocumentSetupParticipant"
+	 name="TypeScript Document Setup Participant"
+	 point="org.eclipse.core.filebuffers.documentSetup">
+	 <participant
+		 extensions="ts,tsx"
+		 class="com.genuitec.eclipse.typescript.text.TypeScriptDocumentSetupParticipant">
+	  </participant>
+   </extension>
+
+   <extension
+         id="typeScriptProblem"
+         name="TypeScript Problem"
+         point="org.eclipse.core.resources.markers">
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <persistent value="true"/>
+   </extension>
+   <extension
+         id="com.genuitec.eclipse.angular2.angular2Problem"
+         name="Angular Template Problem"
+         point="org.eclipse.core.resources.markers">
+      <super type="com.genuitec.eclipse.typescript.typeScriptProblem"/>
+      <persistent value="true"/>
+   </extension>
+   
+   <extension
+         id="tsLintFailure"
+         name="TSLint Problem"
+         point="org.eclipse.core.resources.markers">
+      <super type="com.genuitec.eclipse.typescript.typeScriptProblem"/>
+      <persistent value="true"/>
+   </extension>
+   
+   <extension
+         id="tsLintConfigProblem"
+         name="TSLint Configuration Problem"
+         point="org.eclipse.core.resources.markers">
+      <super type="com.genuitec.eclipse.typescript.typeScriptProblem"/>
+      <persistent value="true"/>
+   </extension>
+   
+   <extension
+         id="tsConfigProblem"
+         name="TypeScript Configuration Problem"
+         point="org.eclipse.core.resources.markers">
+      <super type="com.genuitec.eclipse.typescript.typeScriptProblem"/>
+      <persistent value="true"/>
+   </extension>
+   
+   <extension
+         id="tsLintJsFailure"
+         name="TSLint JavaScript Problem"
+         point="org.eclipse.core.resources.markers">
+      <super type="com.genuitec.eclipse.typescript.typeScriptProblem"/>
+      <persistent value="true"/>
+   </extension>
+   
+
+   <extension
+         id="typeScriptTask"
+         name="TypeScript Task"
+         point="org.eclipse.core.resources.markers">
+      <super type="org.eclipse.core.resources.taskmarker"/>
+      <super type="org.eclipse.core.resources.textmarker"/>
+      <persistent value="true" />
+   </extension>
+
+   <extension
+         point="org.eclipse.search.searchResultViewPages">
+      <viewPage
+            id="com.genuitec.eclipse.typescript.searchViewPage"
+            class="com.genuitec.eclipse.typescript.search.SearchResultPage"
+            searchResultClass="com.genuitec.eclipse.typescript.search.SearchResult">
+      </viewPage>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.bindings">
+      <!--  win32:  M1=CTRL,    M2=SHIFT, M3=ALT, M4=-
+            carbon: M1=COMMAND, M2=SHIFT, M3=ALT, M4=CTRL -->
+      <key
+            sequence="M1+M2+G"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            commandId="com.genuitec.eclipse.typescript.text.findReferences"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="M1+M2+F"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            commandId="com.genuitec.eclipse.typescript.text.format"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="M1+M2+T"
+            commandId="com.genuitec.eclipse.typescript.navigate.openType"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptProjectScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="M1+M2+P"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            commandId="com.genuitec.eclipse.typescript.text.goToMatchingBracket"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="F3"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            commandId="com.genuitec.eclipse.typescript.text.openDefinition"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="M1+O"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            commandId="com.genuitec.eclipse.typescript.text.quickOutline"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="M1+M2+C"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            commandId="com.genuitec.eclipse.typescript.text.toggleComment"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="M1+7"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            commandId="com.genuitec.eclipse.typescript.text.toggleComment"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="M1+/"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            commandId="com.genuitec.eclipse.typescript.text.toggleComment"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            sequence="M2+M3+R"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            commandId="com.genuitec.eclipse.typescript.text.rename"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            platform="carbon"
+            sequence="M2+M3+R"
+            commandId=""
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            platform="carbon"
+            sequence="COMMAND+ALT+R"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            commandId="com.genuitec.eclipse.typescript.text.rename"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+	  <key
+	        sequence="M2+M3+O"
+	        contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+	        commandId="com.genuitec.eclipse.typescript.text.toggleMarkOccurrences"
+	        schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            platform="carbon"
+            sequence="COMMAND+ALT+O"
+            contextId="com.genuitec.eclipse.typescript.text.typeScriptEditorScope"
+            commandId="com.genuitec.eclipse.typescript.text.toggleMarkOccurrences"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.genuitec.eclipse.typescript.typeScriptNature.category"
+            name="%command.category">
+      </category>
+      <command
+            categoryId="com.genuitec.eclipse.typescript.typeScriptNature.category"
+            defaultHandler="com.genuitec.eclipse.typescript.navigate.OpenTypeHandler"
+            description="Open a symbol in a TypeScript editor."
+            id="com.genuitec.eclipse.typescript.navigate.openType"
+            name="%command.openType.name">
+      </command>
+      <command
+            categoryId="com.genuitec.eclipse.typescript.typeScriptNature.category"
+            id="com.genuitec.eclipse.typescript.text.findReferences"
+            name="%command.findReferences.name">
+      </command>
+      <command
+            categoryId="com.genuitec.eclipse.typescript.typeScriptNature.category"
+            id="com.genuitec.eclipse.typescript.text.format"
+            name="%command.format.name">
+      </command>
+      <command
+            categoryId="com.genuitec.eclipse.typescript.typeScriptNature.category"
+            id="com.genuitec.eclipse.typescript.text.goToMatchingBracket"
+            name="%command.goToMatchingBracket.name">
+      </command>
+      <command
+            categoryId="com.genuitec.eclipse.typescript.typeScriptNature.category"
+            id="com.genuitec.eclipse.typescript.text.openDefinition"
+            name="%command.openDefinition.name">
+      </command>
+      <command
+            categoryId="com.genuitec.eclipse.typescript.typeScriptNature.category"
+            id="com.genuitec.eclipse.typescript.text.quickOutline"
+            name="%command.quickOutline.name">
+      </command>
+      <command
+            categoryId="com.genuitec.eclipse.typescript.typeScriptNature.category"
+            id="com.genuitec.eclipse.typescript.text.rename"
+            name="%command.rename.name">
+      </command>
+      <command
+            categoryId="com.genuitec.eclipse.typescript.typeScriptNature.category"
+            id="com.genuitec.eclipse.typescript.text.toggleComment"
+            name="%command.toggleComment.name">
+      </command>
+	  <command
+         categoryId="com.genuitec.eclipse.typescript.typeScriptNature.category"
+         description="Toggles mark occurrences in TypeScript editors"
+         id="com.genuitec.eclipse.typescript.text.toggleMarkOccurrences"
+         name="Toggle Mark Occurences">
+	  </command>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.contexts">
+      <context
+            name="TypeScript"
+            parentId="org.eclipse.ui.textEditorScope"
+            id="com.genuitec.eclipse.typescript.text.typeScriptEditorScope">
+      </context>
+      <context
+      		name="TypeScript Project Scope"
+      		parentId="org.eclipse.ui.contexts.window"
+      		id="com.genuitec.eclipse.typescript.text.typeScriptProjectScope">
+      </context>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="TypeScript Editor"
+            extensions="ts,tsx"
+            default="true"
+            icon="icons/typeScript.png"
+            contributorClass="com.genuitec.eclipse.typescript.text.TypeScriptEditorActionContributor"
+            class="com.genuitec.eclipse.typescript.text.TypeScriptEditor"
+            id="com.palantir.typescript.text.typeScriptEditor">
+            <contentTypeBinding contentTypeId="com.genuitec.eclipse.typescript.tsSource" /> 
+      </editor>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.editors.annotationTypes">
+      <type
+            name="com.genuitec.eclipse.typescript.diagnostic"
+            markerType="com.genuitec.eclipse.typescript.typeScriptProblem">
+      </type>
+      <type
+            name="com.genuitec.eclipse.typescript.occurrences">
+      </type>
+      <type
+            name="com.genuitec.eclipse.typescript.task"
+            markerType="com.genuitec.eclipse.typescript.typeScriptTask"
+            super="org.eclipse.ui.workbench.texteditor.task">
+      </type>
+      <type
+            name="com.genuitec.eclipse.typescript.tslint"
+            markerType="com.genuitec.eclipse.typescript.tsLintFailure">
+      </type>
+      
+      <!-- display TS config problem markers in JSON editor -->
+      <type
+            name="com.genuitec.eclipse.typescript.tsconfig.warning"
+            markerType="com.genuitec.eclipse.typescript.tsConfigProblem"
+            super="org.eclipse.wst.sse.ui.temp.warning"
+			markerSeverity="1">
+      </type>
+      <type
+            name="com.genuitec.eclipse.typescript.tsconfig.error"
+            markerType="com.genuitec.eclipse.typescript.tsConfigProblem"
+            super="org.eclipse.wst.sse.ui.temp.error"
+			markerSeverity="2">
+      </type>
+      
+      <!-- display TSLint problem markers in JSON editor -->
+      <type
+            name="com.genuitec.eclipse.typescript.tslintconfig.warning"
+            markerType="com.genuitec.eclipse.typescript.tsLintConfigProblem"
+            super="org.eclipse.wst.sse.ui.temp.warning"
+			markerSeverity="1">
+      </type>
+      <type
+            name="com.genuitec.eclipse.typescript.tslintconfig.error"
+            markerType="com.genuitec.eclipse.typescript.tsLintConfigProblem"
+            super="org.eclipse.wst.sse.ui.temp.error"
+			markerSeverity="2">
+      </type>
+      
+      <!-- display Angular2 markers in the HTML editor -->
+      <type
+            name="com.genuitec.eclipse.angular2.problem.error"
+            markerType="com.genuitec.eclipse.angular2.angular2Problem"
+            super="org.eclipse.wst.sse.ui.temp.error"
+			markerSeverity="2"/>
+      <type
+            name="com.genuitec.eclipse.angular2.problem.warning"
+            markerType="com.genuitec.eclipse.angular2.angular2Problem"
+            super="org.eclipse.wst.sse.ui.temp.warning"
+			markerSeverity="1"/>
+      <type
+            name="com.genuitec.eclipse.angular2.problem.info"
+            markerType="com.genuitec.eclipse.angular2.angular2Problem"
+            super="org.eclipse.wst.sse.ui.temp.info"
+			markerSeverity="0"/>
+			
+      <!-- display TSLint JavaScript markers in the JS editor -->
+      <type
+            name="com.genuitec.eclipse.typescript.tsLintJsFailure.error"
+            markerType="com.genuitec.eclipse.typescript.tsLintJsFailure"
+            super="org.eclipse.wst.sse.ui.temp.error"
+			markerSeverity="2"/>
+      <type
+            name="com.genuitec.eclipse.typescript.tsLintJsFailure.warning"
+            markerType="com.genuitec.eclipse.typescript.tsLintJsFailure"
+            super="org.eclipse.wst.sse.ui.temp.warning"
+			markerSeverity="1"/>
+			
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator
+            class="com.genuitec.eclipse.typescript.quickfix.TypeScriptMarkerResolutionGenerator"
+            markerType="com.genuitec.eclipse.typescript.typeScriptProblem">
+      </markerResolutionGenerator>
+      <markerResolutionGenerator
+            class="com.genuitec.eclipse.typescript.quickfix.TypeScriptMarkerResolutionGenerator"
+            markerType="com.genuitec.eclipse.typescript.tsLintFailure">
+      </markerResolutionGenerator>
+      <markerResolutionGenerator
+            class="com.genuitec.eclipse.typescript.quickfix.TypeScriptMarkerResolutionGenerator"
+            markerType="com.genuitec.eclipse.typescript.tsLintJsFailure">
+      </markerResolutionGenerator>
+      <markerResolutionGenerator
+            class="com.genuitec.eclipse.typescript.quickfix.TypeScriptMarkerResolutionGenerator"
+            markerType="com.genuitec.eclipse.angular2.angular2Problem">
+      </markerResolutionGenerator>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.editors.markerAnnotationSpecification">
+      <specification
+            annotationType="com.genuitec.eclipse.typescript.occurrences"
+            colorPreferenceKey="occurrenceIndicationColor"
+            colorPreferenceValue="212,212,212"
+            contributesToHeader="false"
+            icon="$nl$/icons/obj16/searchm_obj.gif"
+            highlightPreferenceKey="occurrencesHighlight"
+            highlightPreferenceValue="true"
+            isGoToNextNavigationTargetKey="occurrencesIsGoToNextNavigationTarget"
+            isGoToNextNavigationTarget="false"
+            isGoToPreviousNavigationTargetKey="occurrencesIsGoToPreviousNavigationTarget"
+            isGoToPreviousNavigationTarget="false"
+            label="TypeScript Occurrences"
+            overviewRulerPreferenceKey="occurrencesOverviewRuler"
+            overviewRulerPreferenceValue="true"
+            presentationLayer="4"
+            showInNextPrevDropdownToolbarActionKey="occurrencesShowInNextPrevDropdownToolbarAction"
+            showInNextPrevDropdownToolbarAction="true"
+            textPreferenceKey="occurrencesText"
+            textPreferenceValue="false"
+            textStylePreferenceKey="occurrencesTextStyle"
+            textStylePreferenceValue="NONE"
+            verticalRulerPreferenceKey="occurrencesVerticalRuler"
+            verticalRulerPreferenceValue="false">
+      </specification>
+      <!-- completly disable display of builder problem annotation in the editor -->
+      <specification
+            annotationType="com.genuitec.eclipse.typescript.diagnostic"
+            colorPreferenceValue="0,0,0"
+            contributesToHeader="false"
+            highlightPreferenceKey="NONE"
+            highlightPreferenceValue="false"
+            isGoToNextNavigationTargetKey="NONE"
+            isGoToNextNavigationTarget="false"
+            isGoToPreviousNavigationTargetKey="NONE"
+            isGoToPreviousNavigationTarget="false"
+            overviewRulerPreferenceKey="NONE"
+            overviewRulerPreferenceValue="false"
+            presentationLayer="0"
+            label="Hidden problem annotation"
+            showInNextPrevDropdownToolbarActionKey="NONE"
+            showInNextPrevDropdownToolbarAction="false"
+            textPreferenceKey="NONE"
+            textPreferenceValue="false"
+            textStylePreferenceKey="NONE"
+            textStylePreferenceValue="NONE"
+            verticalRulerPreferenceKey="NONE"
+            verticalRulerPreferenceValue="false"
+            includeOnPreferencePage="false">
+      </specification>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.menus">
+         
+      <menuContribution
+            locationURI="menu:navigate?before=open.ext2">
+          <command
+                commandId="com.genuitec.eclipse.typescript.navigate.openType"
+                icon="icons/etool16/opentype.png"
+                label="%command.openType.name">
+	        <visibleWhen>
+	          	<or>
+	          		<with variable="selection">
+	                  <iterate ifEmpty="false" operator="and">
+	                  	<or>
+		                     <adapt type="org.eclipse.core.resources.IProject">
+		                        <test
+		                              property="com.genuitec.eclipse.typescript.isTypeScriptProject"
+		                              value="true" />
+		                     </adapt>
+		                     <adapt type="org.eclipse.core.resources.IResource">
+		                        <test
+		                              property="com.genuitec.eclipse.typescript.isTypeScriptProject"
+		                              value="true" />
+		                     </adapt>
+		                </or>
+	                  </iterate>
+	          		</with>
+	          		<with variable="activeEditorId">
+	                  	<equals value="com.palantir.typescript.text.typeScriptEditor"/>
+	          		</with>
+	          	</or>
+	        </visibleWhen>
+          </command>
+      </menuContribution>
+
+      <menuContribution
+            locationURI="popup:#TextEditorContext?after=group.open">
+          <command
+                commandId="com.genuitec.eclipse.typescript.text.openDefinition">
+          </command>
+          <command
+                commandId="com.genuitec.eclipse.typescript.text.quickOutline">
+          </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="popup:#TextEditorContext?after=group.edit">
+          <command
+                commandId="com.genuitec.eclipse.typescript.text.format">
+          </command>
+          <command
+                commandId="com.genuitec.eclipse.typescript.text.rename">
+          </command>
+          <command
+                commandId="com.genuitec.eclipse.typescript.text.toggleComment">
+          </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="popup:#TextEditorContext?after=group.find">
+          <command
+                commandId="com.genuitec.eclipse.typescript.text.findReferences">
+          </command>
+      </menuContribution>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="TypeScript Editor Presentation"
+            visible="false"
+            id="com.genuitec.eclipse.typescript.actionSet.presentation">
+         <action
+               allowLabelUpdate="true"
+               style="toggle"
+               toolbarPath="org.eclipse.ui.edit.text.actionSet.presentation/Presentation"
+               id="com.genuitec.eclipse.typescript.text.toggleMarkOccurrences"
+               definitionId="com.genuitec.eclipse.typescript.text.toggleMarkOccurrences"
+               icon="$nl$/icons/etool16/mark_occurrences.png"
+               label="Toggle Mark Occurrences"
+               retarget="true"
+               tooltip="Toggle Mark Occurrences">
+         </action>
+      </actionSet>
+      <actionSet
+            label="TypeScript Actions"
+            visible="true"
+            id="com.genuitec.eclipse.typescript.actionSet.global">
+         <action
+               allowLabelUpdate="true"
+               toolbarPath="org.eclipse.search.searchActionSet/Search"
+               id="com.genuitec.eclipse.typescript.navigate.openType"
+               definitionId="com.genuitec.eclipse.typescript.navigate.openType"
+               icon="icons/etool16/opentype.png"
+               class="com.genuitec.eclipse.typescript.navigate.OpenTypeAction"
+               label="%command.openType.name"
+               tooltip="%command.openType.name">
+         </action>
+      </actionSet>
+   </extension>
+         
+   <extension
+         point="org.eclipse.ui.actionSetPartAssociations">
+      <actionSetPartAssociation
+            targetID="org.eclipse.ui.edit.text.actionSet.presentation">
+          <part id="com.palantir.typescript.text.typeScriptEditor" />
+      </actionSetPartAssociation>
+      <actionSetPartAssociation
+            targetID="com.genuitec.eclipse.typescript.actionSet.presentation">
+          <part id="com.palantir.typescript.text.typeScriptEditor" />
+      </actionSetPartAssociation>
+   </extension>
+
+   <!-- TypeScript preference page contributions sepecific to product -->
+   
+   <!-- MyEclipse -->
+   <extension
+         point = "org.eclipse.ui.preferencePages"
+         id = "myeclipse-spec.typescript.generalPreferencePage">
+      <page
+            class="com.genuitec.eclipse.typescript.preferences.GeneralPreferencePage"
+            id="com.genuitec.eclipse.typescript.generalPreferencePage"
+            category="com.genuitec.eclipse.viper.preferencepage.editor"
+            name="TypeScript">
+            <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+   </extension>
+   
+   <!-- Webclipse -->
+   <extension
+         point = "org.eclipse.ui.preferencePages"
+         id = "webclipse-spec.typescript.generalPreferencePage">
+      <page
+            class="com.genuitec.eclipse.typescript.preferences.GeneralPreferencePage"
+            id="com.genuitec.eclipse.typescript.generalPreferencePage"
+            name="TypeScript">
+            <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+   </extension>
+   
+   <!-- The rest of preference page contributions -->
+   <extension
+         point = "org.eclipse.ui.preferencePages">
+      <page
+            id="com.genuitec.eclipse.typescript.contentAssistPreferencePage"
+            category="com.genuitec.eclipse.typescript.generalPreferencePage"
+            class="com.genuitec.eclipse.typescript.preferences.ContentAssistPreferencePage"
+            name="Content Assist">
+            <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+      <page
+            id="com.genuitec.eclipse.typescript.formatterPreferencePage"
+            category="com.genuitec.eclipse.typescript.generalPreferencePage"
+            class="com.genuitec.eclipse.typescript.preferences.FormatterPreferencePage"
+            name="Formatter">
+            <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+      <page
+            id="com.genuitec.eclipse.typescript.preferences.templatePreferencePage"
+            category="com.genuitec.eclipse.typescript.generalPreferencePage"
+            class="com.genuitec.eclipse.typescript.preferences.TypescriptTemplatePreferencePage"
+            name="Templates">
+            <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+      <page
+            id="com.genuitec.eclipse.typescript.typingPreferencePage"
+            category="com.genuitec.eclipse.typescript.generalPreferencePage"
+            class="com.genuitec.eclipse.typescript.preferences.TypingPreferencePage"
+            name="Typing">
+            <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>    
+      <page
+          class="com.genuitec.eclipse.typescript.preferences.SyntaxColoringPage"
+          id="com.genuitec.eclipse.typescript.preferences.SyntaxColoringPage"
+          category="com.genuitec.eclipse.typescript.generalPreferencePage"
+          name="%typescript.preference.syntaxColoring.name">
+          <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+      <page
+            id="com.genuitec.eclipse.typescript.saveActionsPreferencePage"
+            category="com.genuitec.eclipse.typescript.generalPreferencePage"
+            class="com.genuitec.eclipse.typescript.preferences.SaveActionsPreferencePage"
+            name="Save Actions">
+            <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+      <page
+            id="com.genuitec.eclipse.typescript.preferences.tslintPreferencePage"
+            category="com.genuitec.eclipse.typescript.generalPreferencePage"
+            class="com.genuitec.eclipse.typescript.preferences.TSLintPreferencePage"
+            name="TSLint">
+            <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+         	<keywordReference id="com.genuitec.eclipse.typescript.keyword.tslint"/>
+         	<keywordReference id="com.genuitec.eclipse.typescript.keyword.tslint1"/>
+         	<keywordReference id="com.genuitec.eclipse.typescript.keyword.lint"/>
+      </page>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.propertyPages">
+      <page
+            class="com.genuitec.eclipse.typescript.preferences.TypeScriptPropertyPage"
+            id="com.genuitec.eclipse.typescript.typeScriptPropertyPage"
+            name="TypeScript">
+         <enabledWhen>
+            <adapt
+                  type="org.eclipse.core.resources.IProject">
+               <test
+                     property="com.genuitec.eclipse.typescript.isTypeScriptProject"
+                     value="true">
+               </test>
+            </adapt>
+         </enabledWhen>
+         <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+      <page
+            category="com.genuitec.eclipse.typescript.typeScriptPropertyPage"
+            class="com.genuitec.eclipse.typescript.preferences.BuildPathPropertyPage"
+            id="com.genuitec.eclipse.typescript.buildPathPropertyPage"
+            name="Build Path">
+         <enabledWhen>
+            <adapt
+                  type="org.eclipse.core.resources.IProject">
+               <test
+                     property="com.genuitec.eclipse.typescript.isTypeScriptProject"
+                     value="true">
+               </test>
+            </adapt>
+         </enabledWhen>
+         <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+      <page
+            category="com.genuitec.eclipse.typescript.typeScriptPropertyPage"
+            class="com.genuitec.eclipse.typescript.preferences.CompilerPropertyPage"
+            id="com.genuitec.eclipse.typescript.compilerPreferencePage"
+            name="Compiler">
+         <enabledWhen>
+            <adapt
+                  type="org.eclipse.core.resources.IProject">
+               <test
+                     property="com.genuitec.eclipse.typescript.isTypeScriptProject"
+                     value="true">
+               </test>
+            </adapt>
+         </enabledWhen>
+         <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+      <page
+            category="com.genuitec.eclipse.typescript.typeScriptPropertyPage"
+            class="com.genuitec.eclipse.typescript.preferences.FormatterPreferencePage"
+            id="com.genuitec.eclipse.typescript.formatterPreferencePage"
+            name="Formatter">
+         <enabledWhen>
+            <adapt
+                  type="org.eclipse.core.resources.IProject">
+               <test
+                     property="com.genuitec.eclipse.typescript.isTypeScriptProject"
+                     value="true">
+               </test>
+            </adapt>
+         </enabledWhen>
+         <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+      <page
+            category="com.genuitec.eclipse.typescript.typeScriptPropertyPage"
+            class="com.genuitec.eclipse.typescript.preferences.SaveActionsPreferencePage"
+            id="com.genuitec.eclipse.typescript.saveActionsPropertyPage"
+            name="Save Actions">
+         <enabledWhen>
+            <adapt
+                  type="org.eclipse.core.resources.IProject">
+               <test
+                     property="com.genuitec.eclipse.typescript.isTypeScriptProject"
+                     value="true">
+               </test>
+            </adapt>
+         </enabledWhen>
+         <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+      </page>
+      <page
+            category="com.genuitec.eclipse.typescript.typeScriptPropertyPage"
+            class="com.genuitec.eclipse.typescript.preferences.TSLintPropertyPage"
+            id="com.genuitec.eclipse.typescript.tslintPropertyPage"
+            name="TSLint">
+         <enabledWhen>
+            <adapt
+                  type="org.eclipse.core.resources.IProject">
+               <test
+                     property="com.genuitec.eclipse.typescript.isTypeScriptProject"
+                     value="true">
+               </test>
+            </adapt>
+         </enabledWhen>
+         <keywordReference id="com.genuitec.eclipse.typescript.keyword"/>
+         <keywordReference id="com.genuitec.eclipse.typescript.keyword.tslint"/>
+         <keywordReference id="com.genuitec.eclipse.typescript.keyword.tslint1"/>
+         <keywordReference id="com.genuitec.eclipse.typescript.keyword.lint"/>
+      </page>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+  	        class="com.genuitec.eclipse.typescript.TypeScriptSupportStartup">
+      </startup>
+   </extension>
+   
+   <extension point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            id="com.genuitec.eclipse.typescript.projectTypeTester"
+            type="org.eclipse.core.resources.IResource"
+            namespace="com.genuitec.eclipse.typescript"
+            properties="isTypeScriptProject"
+            class="com.genuitec.eclipse.typescript.ProjectTypeTester">
+      </propertyTester>
+   </extension>
+   
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+		<content-type 
+			id="tsSource"
+			name="TypeScript Source File"
+			file-extensions="ts,tsx"
+			base-type="org.eclipse.core.runtime.text"
+			priority="high">
+		</content-type>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">      
+      <category
+            id="typescriptCategoryWizard"
+            name="%typescript.wizard.category.name">
+      </category>
+   </extension>
+   
+   <extension point="org.eclipse.ui.newWizards">      
+      <wizard
+          category="typescriptCategoryWizard"
+          class="com.genuitec.eclipse.typescript.wizard.NewTypeScriptFileWizard"
+          icon="icons/typeScript.png"
+          id="com.genuitec.eclipse.typescript.wizard.NewTypeScriptFileWizard"
+          name="%typescript.wizard.file.name">
+          <description>%newWizard.file</description>
+      </wizard>
+   </extension>
+   
+   <extension point="org.eclipse.ui.newWizards">      
+      <wizard
+          category="typescriptCategoryWizard"
+          class="com.genuitec.eclipse.typescript.wizard.NewTypeScriptClassWizard"
+          icon="icons/etool16/newclass_wiz.png"
+          id="com.genuitec.eclipse.typescript.wizard.newClassWizard"
+          name="Class">
+          <description>%newWizard.class</description>
+      </wizard>
+   </extension>
+   
+   <extension point="org.eclipse.ui.newWizards">      
+      <wizard
+          category="typescriptCategoryWizard"
+          class="com.genuitec.eclipse.typescript.wizard.NewTypeScriptInterfaceWizard"
+          icon="icons/etool16/newint_wiz.png"
+          id="com.genuitec.eclipse.typescript.wizard.newInterfaceWizard"
+          name="Interface">
+          <description>%newWizard.interface</description>
+      </wizard>
+   </extension>
+   
+   <extension point="org.eclipse.ui.newWizards">      
+      <wizard
+          category="typescriptCategoryWizard"
+          class="com.genuitec.eclipse.typescript.wizard.NewTypeScriptEnumWizard"
+          icon="icons/etool16/newenum_wiz.png"
+          id="com.genuitec.eclipse.typescript.wizard.newEnumWizard"
+          name="Enum">
+          <description>%newWizard.enum</description>
+      </wizard>
+   </extension>
+   
+   <extension
+         point="org.eclipse.wst.common.project.facet.core.facets">
+      <project-facet
+            id="webclipse.typescript">
+         <description>
+            Adds support for writing applications using TypeScript programming language. Currently supported TypeScript version is 1.8.10.
+         </description>
+         <label>
+            TypeScript
+         </label>
+         <property
+               name="hide.version"
+               value="true">
+         </property>
+      </project-facet>
+      <action
+            facet="webclipse.typescript"
+            id="webclipse.typescript.action.install"
+            type="install"
+            version="1.0">
+         <delegate
+               class="com.genuitec.eclipse.typescript.facet.TypeScriptFacetInstallDelegate">
+         </delegate>
+         <config-factory
+               class="com.genuitec.eclipse.typescript.facet.TypeScriptInstallDataModelProvider">
+         </config-factory>
+      </action>
+      <action
+            facet="webclipse.typescript"
+            id="webclipse.typescript.action.uninstall"
+            type="uninstall"
+            version="1.0">
+         <delegate
+               class="com.genuitec.eclipse.typescript.facet.TypeScriptFacetUninstallDelegate">
+         </delegate>
+         <config-factory
+               class="com.genuitec.eclipse.typescript.facet.TypeScriptInstallDataModelProvider">
+         </config-factory>
+      </action>
+      <project-facet-version
+            facet="webclipse.typescript"
+            version="1.0">
+      </project-facet-version>
+   </extension>
+   <extension
+         point="org.eclipse.wst.common.project.facet.core.runtimes">
+      <supported>
+         <runtime-component any="true"/>
+         <facet id="webclipse.typescript"/>
+      </supported>
+   </extension>
+   <extension
+         point="org.eclipse.wst.common.project.facet.ui.images">
+      <image
+            facet="webclipse.typescript"
+            path="icons/obj16/typescript.png"
+            version="1.0">
+      </image>
+   </extension>
+   <extension
+         point="org.eclipse.wst.common.project.facet.ui.wizardPages">
+      <wizard-pages
+            action="webclipse.typescript.action.install">
+         <page
+               class="com.genuitec.eclipse.typescript.wizard.TypeScriptFacetPage">
+         </page>
+      </wizard-pages>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution locationURI="popup:org.eclipse.ui.projectConfigure?after=additions">
+         <command commandId="com.genuitec.webclipse.typescript.addTypeScriptSupport">
+            <visibleWhen checkEnabled="false">
+               <and>
+                  <count value="1"/>
+                  <iterate ifEmpty="false" operator="and">
+                     <adapt type="org.eclipse.core.resources.IProject">
+                        <test
+                              property="com.genuitec.eclipse.typescript.isTypeScriptProject"
+                              value="false" />
+                     </adapt>
+                  </iterate>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="com.genuitec.webclipse.typescript.addTypeScriptSupport"
+            name="Convert to TypeScript Project..."
+            defaultHandler="com.genuitec.eclipse.typescript.command.AddTypeScriptSupportHandler">
+      </command>
+   </extension>
+   <extension
+         point="com.genuitec.eclipse.monitor.metricsProviders">
+      <metrics-provider
+            class="com.genuitec.eclipse.typescript.metrics.TypeScriptMetricsProvider"
+            modes="client">
+      </metrics-provider>
+   </extension>
+   <extension
+         point="com.genuitec.eclipse.j2eedt.core.genericFacetInstall">
+      <facet
+            final-perspective="com.genuitec.eclipse.modernweb.angular2.perspective"
+            id="webclipse.typescript"
+            installable="true"
+            wizard-page-image="icons/wizban/facet_wiz.png">
+      </facet>
+   </extension>
+   <extension
+	     point="org.eclipse.ui.navigator.navigatorContent">
+	  <commonWizard
+	         menuGroupId="org.eclipse.wst.jsdt.ui.java"
+	         type="new"
+	         wizardId="com.genuitec.eclipse.typescript.wizard.NewTypeScriptFileWizard">
+	      <enablement>
+	         <instanceof value="org.eclipse.core.resources.IResource"/>
+	         <adapt
+                	type="org.eclipse.core.resources.IResource">
+		         <test
+		               property="com.genuitec.eclipse.typescript.isTypeScriptProject"
+		               forcePluginActivation="true">
+		         </test>
+	         </adapt>
+	      </enablement>
+	  </commonWizard>
+   </extension>
+   <extension point="org.eclipse.ui.editors.templates">
+     <contextType
+           name="TypeScript statements"
+           class="com.genuitec.eclipse.typescript.template.TypescriptTemplateContextType"
+           id="typescript">
+     </contextType>   
+     <include
+           file="resources/templates/typescript.xml"
+           translations="resources/templates/typescript.properties">
+     </include>
+  </extension>
+   
+    	<!-- See http://schemastore.org/api.html and https://github.com/SchemaStore/schemastore/blob/master/src/api/json/catalog.json -->
+   <extension
+         point="org.eclipse.wst.json.core.schemaCatalogContributions">
+         <schemaCatalogContribution id="http://schemastore.org/ts">
+         	<schema name="tsconfig.json"
+         			description="JSON schema for the TypeScript compiler's configuration file"
+         			fileMatch="tsconfig.json"
+         			url="http://json.schemastore.org/tsconfig"
+         			uri="schemastore/tsconfig-neon" />
+         	<schema name="jsconfig.json"
+         			description="JSON schema for the JavaScript configuration file"
+         			fileMatch="jsconfig.json"
+         			url="http://json.schemastore.org/jsconfig"
+         			uri="schemastore/jsconfig" />         			
+         	<schema name="tslint.json"
+         			description="JSON schema for the TSLint configuration files"
+         			fileMatch="tslint.json"
+         			url="http://json.schemastore.org/tslint"
+         			uri="schemastore/tslint-neon" />
+			<schema name="typings.json"
+         			description="JSON schema for the typings configuration files"
+         			fileMatch="typings.json"
+         			url="http://json.schemastore.org/typings"
+         			uri="schemastore/typings" /> 
+         </schemaCatalogContribution>
+   </extension>
+   
+   
+      <!-- debugging support -->
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.genuitec.eclipse.typescript.text.TypeScriptEditor"
+            class="com.genuitec.eclipse.typescript.debug.TypeScriptAdapterFactory">
+         <adapter
+               type="org.eclipse.debug.ui.actions.IToggleBreakpointsTarget">
+         </adapter>
+      </factory>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editorActions">
+      <editorContribution
+            targetID="com.palantir.typescript.text.typeScriptEditor"
+            id="com.genuitec.eclipse.typescript.ruler.actions">
+         <action
+               label="Quick fix"
+               class="com.genuitec.eclipse.typescript.text.actions.TypeScriptSelectRulerAction"
+               actionID="RulerClick"
+               id="com.genuitec.eclipse.typescript.text.actions.TypeScriptSelectRulerAction">
+         </action>
+      </editorContribution>
+      <editorContribution
+            id="com.genuitec.eclipse.typescript.debug.togglebreakpoint"
+            targetID="com.palantir.typescript.text.typeScriptEditor">
+         <action
+               actionID="RulerDoubleClick"
+               class="org.eclipse.debug.ui.actions.RulerToggleBreakpointActionDelegate"
+               helpContextId="editor_toggle_breakpoint_action_context"
+               icon="icons/full/obj16/brkp_obj.gif"
+               id="org.eclipse.wst.jsdt.debug.ui.RulerToggleBreakpoint"
+               label="%togglebreakpointRulerAction.name">
+         </action>
+      </editorContribution>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <viewerContribution
+            targetID="com.palantir.typescript.text.typeScriptEditor.RulerContext"
+            id="com.genuitec.eclipse.typescript.text.ruler.popup.actions">
+         <action
+               label=""
+               class="com.genuitec.eclipse.typescript.text.actions.TypeScriptSelectRulerAction"
+               menubarPath="additions"
+               definitionId="com.palantir.typescript.text.typeScriptEditor.correction.assist.proposals"
+               id="com.genuitec.eclipse.typescript.text.TypeScriptSelectRulerMenuAction">
+         </action>
+      </viewerContribution>
+      <viewerContribution
+            id="com.genuitec.eclipse.typescript.debug.ruler.popup.actions"
+            targetID="com.palantir.typescript.text.typeScriptEditor.RulerContext">
+         <action
+               class="org.eclipse.debug.ui.actions.RulerToggleBreakpointActionDelegate"
+               helpContextId="editor_toggle_breakpoint_action_context"
+               icon="icons/obj16/brkp_obj.gif"
+               id="org.eclipse.wst.jsdt.debug.ui.toggle.breakpoint.ruler.delegate"
+               label="%togglebreakpointRulerAction.name"
+               menubarPath="debug">
+         </action>
+         <action
+               class="org.eclipse.wst.jsdt.debug.internal.ui.breakpoints.BreakpointPropertiesEditorActionDelegate"
+               helpContextId="breakpoint_properties_editor_ruler_context"
+               id="org.eclipse.wst.jsdt.debug.ui.ruler.breakpoint.properties"
+               label="%breakpointpropertiesRulerAction.name"
+               menubarPath="group.properties"
+               tooltip="%breakpointpropertiesRulerAction.tooltip">
+         </action>
+         <action
+               class="org.eclipse.wst.jsdt.debug.internal.ui.breakpoints.ToggleBreakpointEnablementEditorDelegate"
+               helpContextId="toggle_breakpoint_anablement_ruler_context"
+               id="org.eclipse.wst.jsdt.debug.ui.toggle.breakpoint.enablement"
+               label="%togglebreakpointenablementRulerAction.name"
+               menubarPath="debug"
+               tooltip="%togglebreakpointenablementRulerAction.tooltip">
+         </action>
+      </viewerContribution>
+   </extension>
+   <extension point="org.eclipse.ui.perspectiveExtensions"> 
+        <perspectiveExtension targetID="com.genuitec.eclipse.modernweb.angular2.perspective">
+        	<newWizardShortcut id="com.genuitec.eclipse.typescript.wizard.newClassWizard"/> 
+            <newWizardShortcut id="com.genuitec.eclipse.typescript.wizard.newInterfaceWizard"/> 
+            <newWizardShortcut id="com.genuitec.eclipse.typescript.wizard.newEnumWizard"/>
+         </perspectiveExtension> 
+    </extension>
+    <extension
+	point="org.eclipse.ui.navigator.navigatorContent">
+		<commonWizard
+			type="new"
+			menuGroupId="org.eclipse.wst.jsdt.ui.java"
+			wizardId="com.genuitec.eclipse.typescript.wizard.newClassWizard">
+			<enablement>
+				<adapt type="org.eclipse.core.resources.IResource">
+					<test
+		            	forcePluginActivation="true"
+		            	property="com.genuitec.eclipse.typescript.isTypeScriptProject"/>
+				</adapt>
+			</enablement>
+		</commonWizard>
+			
+		<commonWizard
+			type="new"
+			menuGroupId="org.eclipse.wst.jsdt.ui.java"
+			wizardId="com.genuitec.eclipse.typescript.wizard.newInterfaceWizard">
+			<enablement>
+				<adapt type="org.eclipse.core.resources.IResource">
+					<test
+		            	forcePluginActivation="true"
+		            	property="com.genuitec.eclipse.typescript.isTypeScriptProject"/>
+				</adapt>
+			</enablement>
+		</commonWizard>
+		
+		<commonWizard
+			type="new"
+			menuGroupId="org.eclipse.wst.jsdt.ui.java"
+			wizardId="com.genuitec.eclipse.typescript.wizard.newEnumWizard">
+			<enablement>
+				<adapt type="org.eclipse.core.resources.IResource">
+					<test
+		            	forcePluginActivation="true"
+		            	property="com.genuitec.eclipse.typescript.isTypeScriptProject"/>
+				</adapt>
+			</enablement>
+		</commonWizard> 
+	</extension>
+    <extension
+          point="com.genuitec.eclipse.webclipse.ui.webclipsePreferencePage">
+       <pageClass
+             qualifiedName="com.genuitec.eclipse.typescript.preferences.GeneralPreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="com.genuitec.eclipse.typescript.preferences.ContentAssistPreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="com.genuitec.eclipse.typescript.preferences.FormatterPreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="com.genuitec.eclipse.typescript.preferences.SyntaxColoringPage">
+       </pageClass>
+       <pageClass
+             qualifiedName="com.genuitec.eclipse.typescript.preferences.TypescriptTemplatePreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="com.genuitec.eclipse.typescript.preferences.TypingPreferencePage">
+       </pageClass>
+       <pageClass
+             qualifiedName="com.genuitec.eclipse.typescript.preferences.SaveActionsPreferencePage">
+       </pageClass>
+    </extension>
+    <extension
+         point="com.github.eclipsecolortheme.mapper">
+      <mapper
+         class="com.github.eclipsecolortheme.mapper.GenericMapper"
+         name="TypeScript"
+         pluginId="com.genuitec.eclipse.typescript"
+         xml="/dark_theme_mapping.xml">
+      </mapper>
+   </extension>
+	<extension point="org.eclipse.ltk.core.refactoring.renameParticipants">
+		<renameParticipant
+			class="com.genuitec.eclipse.typescript.refactor.rename.RenameResourceParticipant"
+			id="com.genuitec.eclipse.typescript.refactor.rename.RenameResourceParticipant"
+			name="Rename TypeScript Resource">
+			<enablement>
+				<with variable="element">
+					<adapt type="org.eclipse.core.resources.IResource">
+						<or>
+							<test property="org.eclipse.core.resources.extension" value="ts" />
+							<test property="org.eclipse.core.resources.extension" value="tsx" />
+							<test property="org.eclipse.core.resources.extension" value="html" />
+							<test property="org.eclipse.core.resources.extension" value="css" />
+							<test property="org.eclipse.core.resources.extension" value="scss" />
+							<test property="org.eclipse.core.resources.extension" value="sass" />
+							<instanceof value="org.eclipse.core.resources.IFolder" />
+						</or>
+					</adapt>
+				</with>
+			</enablement>
+		</renameParticipant>
+	</extension>
+	<extension point="org.eclipse.ltk.core.refactoring.moveParticipants">
+		<moveParticipant
+			class="com.genuitec.eclipse.typescript.refactor.move.MoveResourceParticipant"
+			id="com.genuitec.eclipse.typescript.refactor.move.MoveResourceParticipant"
+			name="Move TypeScript Resource">
+			<enablement>
+				<with variable="element">
+					<adapt type="org.eclipse.core.resources.IResource">
+						<or>
+							<test property="org.eclipse.core.resources.extension" value="ts" />
+							<test property="org.eclipse.core.resources.extension" value="tsx" />
+							<test property="org.eclipse.core.resources.extension" value="html" />
+							<test property="org.eclipse.core.resources.extension" value="css" />
+							<test property="org.eclipse.core.resources.extension" value="scss" />
+							<test property="org.eclipse.core.resources.extension" value="sass" />
+							<instanceof value="org.eclipse.core.resources.IFolder" />
+						</or>
+					</adapt>
+				</with>
+			</enablement>
+		</moveParticipant>
+	</extension>
+	<extension point="org.eclipse.ui.handlers">
+		<handler
+			class="com.genuitec.eclipse.typescript.refactor.rename.RenameResourceHandler"
+			commandId="org.eclipse.ltk.ui.refactoring.commands.renameResource">
+			<activeWhen>
+				<with variable="selection">
+					<count value="1" />
+					<iterate ifEmpty="false">
+						<adapt type="org.eclipse.core.resources.IResource">
+							<or>
+								<test property="org.eclipse.core.resources.extension" value="ts" />
+								<test property="org.eclipse.core.resources.extension" value="tsx" />
+								<test property="org.eclipse.core.resources.extension" value="html" />
+								<test property="org.eclipse.core.resources.extension" value="css" />
+								<test property="org.eclipse.core.resources.extension" value="scss" />
+								<test property="org.eclipse.core.resources.extension" value="sass" />
+								<instanceof value="org.eclipse.core.resources.IFolder" />
+							</or>
+						</adapt>
+					</iterate>
+				</with>
+			</activeWhen>
+		</handler>
+		<handler
+			class="com.genuitec.eclipse.typescript.refactor.move.MoveResourcesHandler"
+			commandId="org.eclipse.ltk.ui.refactoring.commands.moveResources">
+			<activeWhen>
+				<with variable="selection">
+					<count value="1" />
+					<iterate ifEmpty="false">
+						<adapt type="org.eclipse.core.resources.IResource">
+							<or>
+								<test property="org.eclipse.core.resources.extension" value="ts" />
+								<test property="org.eclipse.core.resources.extension" value="tsx" />
+								<test property="org.eclipse.core.resources.extension" value="html" />
+								<test property="org.eclipse.core.resources.extension" value="css" />
+								<test property="org.eclipse.core.resources.extension" value="scss" />
+								<test property="org.eclipse.core.resources.extension" value="sass" />
+								<instanceof value="org.eclipse.core.resources.IFolder" />
+							</or>
+						</adapt>
+					</iterate>
+				</with>
+			</activeWhen>
+		</handler>
+	</extension>
+	
+	<extension
+	     point="org.eclipse.ui.keywords">
+	    <keyword
+	            label="TypeScript"
+	            id="com.genuitec.eclipse.typescript.keyword"/>
+		<keyword
+	            label="TSLint"
+	            id="com.genuitec.eclipse.typescript.keyword.tslint"/>
+		<keyword
+	            label="TS Lint"
+	            id="com.genuitec.eclipse.typescript.keyword.tslint1"/>
+		<keyword
+	            label="Lint"
+	            id="com.genuitec.eclipse.typescript.keyword.lint"/>
+	</extension>
+</plugin>

@@ -1,0 +1,144 @@
+{
+  "name": "Emmet",
+  "type": "menu",
+  "items": [
+    {
+      "name": "Encode\\Decode data:URL image",
+      "type": "action",
+      "id": "encode_decode_data_url"
+    },
+    {
+      "name": "Previous Edit Point",
+      "type": "action",
+      "id": "prev_edit_point"
+    },
+    {
+      "name": "Next Edit Point",
+      "type": "action",
+      "id": "next_edit_point"
+    },
+    {
+      "name": "Numbers",
+      "type": "menu",
+      "items": [
+        {
+          "name": "Evaluate Math Expression",
+          "type": "action",
+          "id": "evaluate_math_expression"
+        },
+        {
+          "name": "Increment number by 1",
+          "type": "action",
+          "id": "increment_number_by_1"
+        },
+        {
+          "name": "Decrement number by 1",
+          "type": "action",
+          "id": "decrement_number_by_1"
+        },
+        {
+          "name": "Increment number by 10",
+          "type": "action",
+          "id": "increment_number_by_10"
+        },
+        {
+          "name": "Decrement number by 10",
+          "type": "action",
+          "id": "decrement_number_by_10"
+        },
+        {
+          "name": "Increment number by 0.1",
+          "type": "action",
+          "id": "increment_number_by_01"
+        },
+        {
+          "name": "Decrement number by 0.1",
+          "type": "action",
+          "id": "decrement_number_by_01"
+        }
+      ]
+    },
+    {
+      "name": "Expand Abbreviation",
+      "type": "action",
+      "id": "expand_abbreviation"
+    },
+    {
+      "name": "Balance (inward)",
+      "type": "action",
+      "id": "balance_inward"
+    },
+    {
+      "name": "Balance (outward)",
+      "type": "action",
+      "id": "balance_outward"
+    },
+    {
+      "name": "HTML",
+      "type": "menu",
+      "items": [
+        {
+          "name": "Go To Matching Tag Pair",
+          "type": "action",
+          "id": "matching_pair"
+        },
+        {
+          "name": "Remove Tag",
+          "type": "action",
+          "id": "remove_tag"
+        },
+        {
+          "name": "Split\\Join Tag Declaration",
+          "type": "action",
+          "id": "split_join_tag"
+        },
+        {
+          "name": "Update Tag",
+          "type": "action",
+          "id": "update_tag"
+        }
+      ]
+    },
+    {
+      "name": "Merge Lines",
+      "type": "action",
+      "id": "merge_lines"
+    },
+    {
+      "name": "CSS",
+      "type": "menu",
+      "items": [
+        {
+          "name": "Reflect Value",
+          "type": "action",
+          "id": "reflect_css_value"
+        }
+      ]
+    },
+    {
+      "name": "Select Next Item",
+      "type": "action",
+      "id": "select_next_item"
+    },
+    {
+      "name": "Select Previous Item",
+      "type": "action",
+      "id": "select_previous_item"
+    },
+    {
+      "name": "Toggle Comment",
+      "type": "action",
+      "id": "toggle_comment"
+    },
+    {
+      "name": "Update Image Size",
+      "type": "action",
+      "id": "update_image_size"
+    },
+    {
+      "name": "Wrap With Abbreviation",
+      "type": "action",
+      "id": "wrap_with_abbreviation"
+    }
+  ]
+}

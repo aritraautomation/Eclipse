@@ -1,0 +1,1 @@
+update.matchExp=providedCapabilities.exists(pc | pc.namespace == 'org.eclipse.equinox.p2.iu' && (pc.name == 'com.genuitec.eclipse.typescript' || pc.name == 'com.palantir.typescript'))

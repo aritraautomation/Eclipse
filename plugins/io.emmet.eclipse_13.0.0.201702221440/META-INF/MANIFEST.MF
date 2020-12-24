@@ -1,0 +1,332 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: io.emmet.eclipse;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: hudson
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui
+ .editors,org.eclipse.jface.text,org.eclipse.core.expressions,org.mozi
+ lla.javascript;bundle-version="1.7.2",com.genuitec.eclipse.ui.common.
+ platform,org.eclipse.e4.ui.css.swt.theme,org.eclipse.e4.core.services
+ ,org.eclipse.osgi.services,org.eclipse.osgi,org.eclipse.e4.core.conte
+ xts,org.eclipse.e4.core.di,org.apache.commons.lang
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.eclipsesource.json;version="0.9.2",com.google.gson
+ ;version="[2.2.4,2.3.0)",org.eclipse.core.filesystem,org.eclipse.core
+ .resources,org.eclipse.jface.text,org.eclipse.ui,org.eclipse.ui.edito
+ rs.text,org.eclipse.ui.part,org.eclipse.ui.texteditor,org.eclipse.ui.
+ texteditor.templates
+Export-Package: io.emmet,io.emmet.eclipse,io.emmet.eclipse.handlers,io
+ .emmet.eclipse.preferences,io.emmet.eclipse.preferences.output
+Bundle-Name: Emmet for Eclipse
+Bundle-Version: 13.0.0.201702221440
+Bundle-ClassPath: .
+Bundle-Activator: io.emmet.eclipse.EclipseEmmetPlugin
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_45
+Eclipse-BundleShape: dir
+
+Name: META-INF/maven/com.genuitec.eclipse.webclipse/io.emmet.eclipse/p
+ om.properties
+SHA-256-Digest: oU3mCZP+fBkKmHHei8/KL57F45aspjltGs6reIFrdnU=
+
+Name: plugin.xml
+SHA-256-Digest: kavgPwZDCtm+5UAUoTK8VqcwjgaIgUupz5ygzZVyZc8=
+
+Name: io/emmet/eclipse/preferences/StatusInfo.class
+SHA-256-Digest: rxVVDD18gaABcfJhgGbzg5YOOV2Cy8bD/rClO+9hPXU=
+
+Name: io/emmet/eclipse/WrapWithAbbreviationDialog$2.class
+SHA-256-Digest: Hp3WYtGkJTXqKJyrdAy+G8qe/2TPtA/yf9mCZhm8S28=
+
+Name: io/emmet/eclipse/EclipseEmmetEditor.class
+SHA-256-Digest: 5R8lRFzVOtViy2pS8GfOnSULkQEkGBiOGC6i2+8g8EA=
+
+Name: io/emmet/actions/AbstractMenuItem.class
+SHA-256-Digest: IqjZlo+sj83L9MAN9uV/nVyTwo5mgSAuRcvrgNhCzto=
+
+Name: io/emmet/eclipse/preferences/output/XMLOutputPreferencePage.clas
+ s
+SHA-256-Digest: EnkVqpvTtHUtzHsUCmFoaUCSaBwdpLWhqsHdEXrsz78=
+
+Name: io/emmet/eclipse/TabKeyHandler$2.class
+SHA-256-Digest: o/qeojPliSJnW6sZ91k0RajF3gPInLJ0HcEXS+sCNKU=
+
+Name: io/emmet/eclipse/preferences/VariablePreferencePage$5.class
+SHA-256-Digest: L/fYWflotRuqhbLTeNSGwseykuJyy6rd2lQ28hExyU8=
+
+Name: io/emmet/SelectionData.class
+SHA-256-Digest: Qybz5hGT4TyToXsUnJH+9JUKZd/vzb5ZEuLvVhf9eMs=
+
+Name: io/emmet/eclipse/preferences/VariablePreferencePage$TemplateLabe
+ lProvider.class
+SHA-256-Digest: fV+vgnR+sC0jlRpdQjIFe4acckO48No5h9XfSm1afGo=
+
+Name: io/emmet/eclipse/handlers/WrapWithAbbreviationAction.class
+SHA-256-Digest: RSt1iFvE8ZfNmJhcRsAqK+6HIoYGrohCgyt47e0jviU=
+
+Name: io/emmet/eclipse/preferences/LabelFieldEditor.class
+SHA-256-Digest: YewLE0n3hGLYB+o1TdyX3GP8/6so4sP/YuOUuUMeo7A=
+
+Name: io/emmet/eclipse/preferences/EmmetAbbreviationsPreferencesPage.c
+ lass
+SHA-256-Digest: XsIux9F8V4nmMqKVyZj9hktJ0gGRABDdicFUStBOv5k=
+
+Name: io/emmet/eclipse/preferences/output/HAMLOutputPreferencePage.cla
+ ss
+SHA-256-Digest: iSS38ZHF+Z0XUesCeE6sKbHO+V7Euaso+Syn3maEs1c=
+
+Name: io/emmet/emmet-app.js
+SHA-256-Digest: t9A2Rkw0UGRpigO81FG9AAJez1GkqeTcmNi5U2pBIrU=
+
+Name: io/emmet/eclipse/EclipseTemplateProcessor.class
+SHA-256-Digest: LFzfncZjOPX+zg5wuOfnUErLQ0R0CjMqUp7SVBuvRsU=
+
+Name: io/emmet/eclipse/views/CheatSheetView$1.class
+SHA-256-Digest: vjDcf08zNadzVJK7Cm7OoaBxEzThGGxZ8rLye7Tq/ug=
+
+Name: io/emmet/eclipse/preferences/VariablePreferencePage$EditVariable
+ Dialog$2.class
+SHA-256-Digest: HLhZzq83g2Dr6aRUH3QuhYD+sEdi15xvQfStw/NaaS8=
+
+Name: io/emmet/eclipse/preferences/output/DefaultOutputPreferencePage.
+ class
+SHA-256-Digest: ojBOew0CWScSlzQyBsX0N0UG800ekqU/O25aP+WOwOA=
+
+Name: io/emmet/IEmmetEditor.class
+SHA-256-Digest: PImN1nHlEZOzOFDKD/peIDJqn5YoGthHkzQBcx3goCM=
+
+Name: io/emmet/java-wrapper.js
+SHA-256-Digest: gcdl6V4dMJ6z+C48wECPKhyAZ6sVrzhVTK+O7j1mSYg=
+
+Name: io/emmet/eclipse/EclipseEmmetEditor$1.class
+SHA-256-Digest: my0GyGDlbMwti6sEoGUNF9B4jOXiF6Prv01bFF1j35Y=
+
+Name: io/emmet/eclipse/preferences/SpinnerFieldEditor$3.class
+SHA-256-Digest: DnoXNkOiSPfoSvKWEds8iWn20dta1UKJGC6r/wB713A=
+
+Name: io/emmet/eclipse/EmmetMenuContribution.class
+SHA-256-Digest: cjrL1Fobj+UM7EKxg+2/DLZgs5HhLEYawaYoUvPZYG0=
+
+Name: io/emmet/eclipse/preferences/TemplateContentProvider.class
+SHA-256-Digest: NUEOmDjgdfmYzWw/q316p7td8WqaY2GFgmgOPYdOkhM=
+
+Name: io/emmet/eclipse/views/CheatSheetView.class
+SHA-256-Digest: MDEXSUw0+zh+A6Boe7dG0MBOxHcOp6MCv1pSw4vPAUg=
+
+Name: io/emmet/eclipse/handlers/InsertFormattedLineBreakAction.class
+SHA-256-Digest: /xUso7JKxljghnThaLsk8pU0o40OwwIJe5qBE9khhMQ=
+
+Name: io/emmet/eclipse/handlers/ActionRunner.class
+SHA-256-Digest: 26Eu3ZMMEVK/fc93NhBEkN/392kLWRjjW9KAK3UhDJE=
+
+Name: io/emmet/eclipse/preferences/VariablePreferencePage$3.class
+SHA-256-Digest: hsepIe5ZZ8KTq60ibDOE/gufXtBV03D5v7eY6GDGiHM=
+
+Name: io/emmet/eclipse/preferences/output/CSSOutputPreferencePage.clas
+ s
+SHA-256-Digest: CV9eJsfp19x3iP40SXFm2HMMeRVl72p7x2UVFPga9tc=
+
+Name: io/emmet/eclipse/preferences/EclipseEmmetPreferencePage.class
+SHA-256-Digest: ducEPPMCUJ1z/M3QbdCQR6ntm0Q/8ck0d64Mc6tDXOc=
+
+Name: io/emmet/eclipse/handlers/OpenURLHandler.class
+SHA-256-Digest: 377WqWQaFyPbV2ApZj1MDoexZupdUVyvy0JSkwjmTG0=
+
+Name: io/emmet/eclipse/EclipseEmmetFile.class
+SHA-256-Digest: 1wb5viA7pJYxQH7DaMXSUZV8+ULrqBs7dG3QNhIClYY=
+
+Name: io/emmet/eclipse/preferences/SpinnerFieldEditor$2.class
+SHA-256-Digest: /lab2aABF7GyS94TB8L2hrZTm3zF4pFilEwT9JS7pcg=
+
+Name: icons/emmet.png
+SHA-256-Digest: sxy4WaBQw7QlDXlq3pzaU4IxVYFxuGoGaEYHWUmiUpM=
+
+Name: io/emmet/eclipse/preferences/SpinnerFieldEditor$1.class
+SHA-256-Digest: Mw9JtGexNM5uc5raBZqKasMojuye/6R+Q4DxF+jkMdA=
+
+Name: io/emmet/eclipse/AutoCompleteDialog.class
+SHA-256-Digest: 59wClqqxeWa8eXsqD9/YhA6/hMFEmciEuOL0QT9nChI=
+
+Name: io/emmet/IEmmetFile.class
+SHA-256-Digest: NlKX8dpuayUXxoTTAcyLiyv/8dkUpy9AxCcfTsNLb2c=
+
+Name: io/emmet/eclipse/handlers/ExpandAbbreviationAction.class
+SHA-256-Digest: 3O8hpIZrDjYoqG2jFHtPOvjr/T65GEI14nC3zAoapck=
+
+Name: io/emmet/eclipse/preferences/VariablePreferencePage$2.class
+SHA-256-Digest: /dKeXkkFbaMQUEpQA99JYwYVLw7+WjEqPU3w5vNwoM8=
+
+Name: io/emmet/eclipse/preferences/PreferenceInitializer.class
+SHA-256-Digest: ri84VJyDyZDd7E1Z6xi95dCfZhAW8YYeKrsUQWUcpYM=
+
+Name: io/emmet/eclipse/preferences/SpacerFieldEditor.class
+SHA-256-Digest: 6eJvsxehaSbaCxcEkWOwqmCB0BsXNjCZh3Y54EkwHQs=
+
+Name: io/emmet/Emmet.class
+SHA-256-Digest: v7/4l8bQHyMp5vvP03nlQljbOX/XNPN8VVUpw2hLmJI=
+
+Name: io/emmet/eclipse/EclipseEmmetEditor$1Answer.class
+SHA-256-Digest: K0P54KzHMhgq3oUUmMbg9fkPbgrLzqz2eKMA183Ce8c=
+
+Name: io/emmet/actions/Action.class
+SHA-256-Digest: 5eGKGzd2/dIjEsXMbPdDtG7PSS7nv5jHt4px3xpmK7U=
+
+Name: cheatsheet/index-dark.html
+SHA-256-Digest: 3kUdBiPeCYbH5CB4qLYurs7K0hmUUNVxysE2U/SktHc=
+
+Name: io/emmet/eclipse/EditorTypeInvestigator.class
+SHA-256-Digest: VN9ZRuK4wj9Ud0bz1fQzo4Fh4fImcvLpKA9yfW4v4dQ=
+
+Name: io/emmet/eclipse/EclipseEmmetHelper.class
+SHA-256-Digest: +6RJ3Ozo2+3cFI9CiDUExYN4KE1eZjWhe/Nyx4/q4B4=
+
+Name: io/emmet/eclipse/preferences/VariablePreferencePage$EditVariable
+ Dialog$1.class
+SHA-256-Digest: Tzns/lmKhWu99TUft3emCnWfyMupD8VKyeN5XueTzwY=
+
+Name: META-INF/maven/com.genuitec.eclipse.webclipse/io.emmet.eclipse/p
+ om.xml
+SHA-256-Digest: K2GxSeni/gLFYMpM2WxxNyLkIbCj9DRS5EK/jSDN+S0=
+
+Name: io/emmet/eclipse/preferences/VariablePreferencePage$1.class
+SHA-256-Digest: 8dYBxSlqs6d/Z98qPSXXvPnzLD0vyn3kOyZU347Rpv4=
+
+Name: io/emmet/eclipse/WrapWithAbbreviationDialog$2$1.class
+SHA-256-Digest: RQZTkDRL8X0GUJwXUmP1pD5us/WAnhPXNas/e3Yn5X8=
+
+Name: io/emmet/eclipse/preferences/EclipseEmmetPreferencePage$1.class
+SHA-256-Digest: 0ZbEj8Ncte9Zf5R2FJCSB2Rj19ALnhNHGtKPr6WZkFQ=
+
+Name: io/emmet/eclipse/preferences/TemplateHelper.class
+SHA-256-Digest: /g7SkXyYyI+G4feFuCO6MugtyiTcXyB78COtRfbyxig=
+
+Name: io/emmet/eclipse/preferences/EmmetSnippetsPreferencesPage.class
+SHA-256-Digest: OgJeb0X/zdQrB5on5yxVeE2yE9cq5khCfSVTQr7uaJA=
+
+Name: io/emmet/eclipse/TabKeyHandler.class
+SHA-256-Digest: c/DC/F7WM+x8c9HNB37j/zFeFKXTW8G4vMEs7L1jRE0=
+
+Name: io/emmet/eclipse/preferences/SpinnerFieldEditor$4.class
+SHA-256-Digest: bb/11jqa8tyXo818ssXGGWEC8pgGLQ/pCCF9qWh/WK4=
+
+Name: io/emmet/eclipse/EclipseEmmetPlugin$1.class
+SHA-256-Digest: cyz4nHIQjD0LKPrmp+sKQwXKuIxAimP0NkbqoeWca4Y=
+
+Name: io/emmet/eclipse/handlers/DefaultAction.class
+SHA-256-Digest: lFK60uV7ujSvjakO0cKqkW6nMnZBLdwYD6pWs96LYE8=
+
+Name: io/emmet/menu.json
+SHA-256-Digest: M6/7S/0Br/yRZBdjsd7vkCjHGSPVUF+A6IE3W7Nqm/E=
+
+Name: io/emmet/eclipse/preferences/PreferenceConstants.class
+SHA-256-Digest: O/InZYu55m6B8It6KGLkgBoYv+aWqNcDRmeBa5h4+kg=
+
+Name: io/emmet/actions/Menu.class
+SHA-256-Digest: +TPkOIQGWYCcwZCMajXG7K5IDChAYCxyLqRkjL5+s1I=
+
+Name: cheatsheet/css/main.css
+SHA-256-Digest: OPd2MGzT+HXP/H3qJhMGjJtcfhxwjFj+ozJnD1PR3+k=
+
+Name: io/emmet/eclipse/EclipseUserData.class
+SHA-256-Digest: p7ILJZXWnrpAdZC/hTxeYXSnqigPhvwnJ0Z6jvgufXQ=
+
+Name: io/emmet/IUserData.class
+SHA-256-Digest: N7AAd9PGevUyKtDEO372MZh83/utb4sFPWwxSPmtClI=
+
+Name: io/emmet/eclipse/WrapWithAbbreviationDialog.class
+SHA-256-Digest: u16yRw3XrwZWcL5Q2VWzYCQKzOQBrJVZ44+qht4US4c=
+
+Name: io/emmet/eclipse/preferences/VariablePreferencePage$EditVariable
+ Dialog.class
+SHA-256-Digest: osGYwrgAIMKThAyzXjwkSe3pe37c/n7RFYjyFRSplZs=
+
+Name: io/emmet/eclipse/preferences/VariablePreferencePage.class
+SHA-256-Digest: AfjJwsxTiH7WimRE2GRSCz+e4ZHOCJMbcwP7uhzK0Xg=
+
+Name: io/emmet/eclipse/preferences/SpinnerFieldEditor.class
+SHA-256-Digest: 0NI16vJbish+WXaMkdYCckLGE/SVbVeKHELpXzD96zE=
+
+Name: io/emmet/eclipse/preferences/EmmetVariablesPreferencePage.class
+SHA-256-Digest: nf33CDTbDL7UWPPLNHC17R92gUZCcKZIFBH9kqeXln4=
+
+Name: io/emmet/eclipse/Startup.class
+SHA-256-Digest: Hk4+xciA2d1jSNcJ0U+zKUk9cUzoDwIsEH1UeXCSIGY=
+
+Name: cheatsheet/js/cheatsheet.js
+SHA-256-Digest: gLILSDxe4QdJtUoIQof/bJnA/S57zREnqDo8BCgMOTM=
+
+Name: io/emmet/snippets.json
+SHA-256-Digest: Dvo+oYvSXycuJQ/kuaip7OOitvLuN53GnJ5dnPxM7Dk=
+
+Name: io/emmet/underscore.js
+SHA-256-Digest: LeGeo7heAyOd2cvjDZVFobWnzi8GYv6urz0tCIF56lw=
+
+Name: io/emmet/TabStop.class
+SHA-256-Digest: L4EKFNRixMXn6KsO5J3PbVM3KSE9JX0AUWyGhRcGg3U=
+
+Name: io/emmet/eclipse/preferences/VariablePreferencePage$4.class
+SHA-256-Digest: Zq3/UyV1FV1N4KkEVod7Fx+smyw5qAejwmiwGRIME/c=
+
+Name: io/emmet/eclipse/handlers/ShowCheatSheetHandler.class
+SHA-256-Digest: 5PnFbQ0Zl2Txn7PZ4zKCohS01+rpSCO1+P1R/8xfSXc=
+
+Name: cheatsheet/index-light.html
+SHA-256-Digest: Ox+dS534JmzESW9srqWSBzPokSEYq5fgZzRZUeyLKig=
+
+Name: io/emmet/eclipse/EmmetContextType.class
+SHA-256-Digest: CZHh+kBJBLssivS1mZPMgg18WJaNaqr/cb58Gll64YE=
+
+Name: io/emmet/eclipse/Startup$1.class
+SHA-256-Digest: 9DJqXBJXWW3tl7ZcQYdcYi2nudaafEtXyt8nZ3bVZgs=
+
+Name: io/emmet/eclipse/preferences/output/XSLOutputPreferencePage.clas
+ s
+SHA-256-Digest: 74Hw6ve9o87s3Uz/xCSLFuZdGBuayC/gNO75d6Q8cak=
+
+Name: io/emmet/TabStopStructure.class
+SHA-256-Digest: iWNkR2yoCEbCzkgkmyuukglCK6B/DVk1CiwMP0m9FhQ=
+
+Name: io/emmet/eclipse/preferences/VariablePreferencePage$6.class
+SHA-256-Digest: cDJgBssrw7+jMB+4anCneNzuFUVPWAa3M4oYtRhnmNU=
+
+Name: io/emmet/eclipse/preferences/SpinnerFieldEditor$5.class
+SHA-256-Digest: 1IKWHpsJnDC1CBidv3EXrGKKcxjkPLGUAeOT4at+9O4=
+
+Name: cheatsheet/css/cheatsheet-light.css
+SHA-256-Digest: cWbiPTQB4gbCKDNpMg9VKE2QVZNMgBQnzxzg1/c6wxI=
+
+Name: cheatsheet/css/cheatsheet-dark.css
+SHA-256-Digest: 5XNdV7X54JA/CuuVDCTvtirejGaSk/p+EFxl+I5Uivw=
+
+Name: io/emmet/file-interface.js
+SHA-256-Digest: NsvJ5+WLCzMaoCWDDrEmkdDZXH7TTKOU2Zz+fTROmKI=
+
+Name: io/emmet/eclipse/WrapWithAbbreviationDialog$1.class
+SHA-256-Digest: M6LHCwA7fSuWkanJed+5nmWbsGx4Dzw9aeLMqr8U1Rc=
+
+Name: io/emmet/eclipse/preferences/output/HTMLOutputPreferencePage.cla
+ ss
+SHA-256-Digest: 914Zle/SmiL1UpRYfg0+9UMY4ZaJ9L2zXxBYbVDbbxY=
+
+Name: cheatsheet/js/main.js
+SHA-256-Digest: 951WAj/7RG9CagqGhg5+z1wW0FGtN1BiBN9QqqzklAY=
+
+Name: io/emmet/ecma5-compat.js
+SHA-256-Digest: mzEmirdxFdGbtZ/ZgoRmQAmIgqpgBFwYduwZNkmxfNM=
+
+Name: io/emmet/eclipse/EclipseEmmetPlugin.class
+SHA-256-Digest: 9Vfq/l2JsABhRRusMv1apP7tnfqhpH5n6PzhGyrPbhI=
+
+Name: icons/sample.gif
+SHA-256-Digest: 6jMftqI7oSaDQ6w4VCjJEtTiJvYpMr0Z1u+lWgsbkjY=
+
+Name: io/emmet/TabStopGroup.class
+SHA-256-Digest: O70ar3pm4w4vmiILJzK1rrSTBxZOvyl+orDvT62uHco=
+
+Name: io/emmet/eclipse/TabKeyHandler$1.class
+SHA-256-Digest: if2NKAuZq6k+cgXr61hsOZE17mn79P6ZBZ56PJDkuI8=
+
+Name: io/emmet/eclipse/preferences/output/OutputProfile.class
+SHA-256-Digest: 5bMCXTiHDs3uV9hsNT1ENbTDI2KSkUOESl73cKJw238=
+
